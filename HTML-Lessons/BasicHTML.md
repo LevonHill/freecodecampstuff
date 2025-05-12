@@ -24,3 +24,10 @@ An HTML boilerplate is like a ready-made template for your webpages. You can thi
 UTF-8, or UCS Transformation format 8, is a standardized character encoding widely used on the web. Character encoding is the method computers used to store characters as Data. Essentially all text on a webpage is a sequence of characters stored as one or more bytes, in computing a bite is a unit of data consisting of eight bits or binary digits. UTF-8 supports every character in the Unico character and this includes characters and symbols from all writing systems languages and technical symbols too, by setting the character encoding to utf8, it will ensure that the accident e character displayed correctly on the page, for each new project you create you should , include this meta element with 'charset set to utf8.. 
 
 
+//
+HTML5 has some elements that identify different content areas. These elements make your HTML easier to read and help with Search Engine Optimization (SEO) and accessibility.
+
+The main element is used to represent the main content of the body of an HTML document. Content inside the main element should be unique to the document and should not be repeated in other parts of the document.
+
+
+
