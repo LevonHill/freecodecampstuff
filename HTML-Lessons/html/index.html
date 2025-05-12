@@ -1,11 +1,13 @@
 <!-- @format -->
+<!-- following along with freedcode camp projects-->
 
 <!DOCTYPE html>
 <html lang="en">
+  <!--The head element is used to contain metadata about the document, such as its title, links to stylesheets, and scripts. Metadata is information about the page that isn't displayed directly on the page.-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Freecodecamp!</title>
+    <title>CatPhotoApp</title>
     <link rel="stylesheet" href="/HTML-Lessons/css/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
@@ -21,17 +23,96 @@
     <!--HTML5 has some elements that identify different content areas. These elements make your HTML easier to read and help with Search Engine Optimization (SEO) and accessibility.
 The main element is used to represent the main content of the body of an HTML document. Content inside the main element should be unique to the document and should not be repeated in other parts of the document.-->
 
+    <!--In the previous step, you put the h1, h2, comment, and p elements inside the main element. This is called nesting. Nested elements should be placed two spaces further to the right of the element they are nested in. This spacing is called indentation and it is used to make HTML easier to read.-->
     <main>
       <h1>CatPhotoApp</h1>
-
-      <h2>Cat Photos</h2>
-      <!--The p element is used to create a paragraph of text on websites.-->
-      <p>Everyone loves cute cats online!</p>
-      <!--HTML attributes are special words used inside the opening tag of an element to control the element's behavior. The src attribute in an img element specifies the image's URL (where the image is located).
+      <section>
+        <h2>Cat Photos</h2>
+        <!--The p element is used to create a paragraph of text on websites.-->
+        <p>
+          Everyone loves
+          <a
+            href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg"
+            target="_blank"
+            >cute cats</a
+          >
+          online!
+        </p>
+        <!--HTML attributes are special words used inside the opening tag of an element to control the element's behavior. The src attribute in an img element specifies the image's URL (where the image is located).
         Here is an example of an img element with a src attribute pointing to the freeCodeCamp logo:-->
-      <img
-        src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
-      />
+
+        <!--All img elements should have an alt attribute. The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load.-->
+        <!--In previous steps, you used an anchor element to turn text into a link. Other types of content can also be turned into a link by wrapping it in anchor tags.-->
+        <a href="https://freecatphotoapp.com">
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+            alt="a cute orange cat laying on its back"
+          />
+        </a>
+
+        <!--To open links in a new tab, you can use the target attribute on the anchor (a) element.
+
+The target attribute specifies where to open the linked document. target="_blank" opens the linked document in a new tab or window.
+
+Here is the basic syntax for an a element with a target attribute:-->
+        <p>
+          See more
+          <a href="https://freecatphotoapp.com" target="_blank">cat photos</a>
+          in our gallery.
+        </p>
+      </section>
+      <!--It is time to add a new section. Add a second section element below the existing section element.-->
+      <section>
+        <!--Within the second section element, add a new h2 element with the text Cat Lists.-->
+        <!--When you add a lower-rank heading element to the page, it's implied that you're starting a new subsection.-->
+        <!--After the last h2 element of the second section element, add an h3 element with this text:-->
+        <h2>Cat List</h2>
+        <h3>Things cats Love:</h3>
+        <!--The li element is used to create a list item in an ordered or unordered list.-->
+        <ul>
+          <li>catnip</li>
+
+          <li>laser pointers</li>
+
+          <li>lasagna</li>
+        </ul>
+        <!--After the unordered list, add a new image with a src attribute value set to:
+
+https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg
+
+And its alt attribute value to:-->
+        <!--The figure element represents self-contained content and will allow you to associate an image with a caption.-->
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+            alt="A slice of lasagna on a plate."
+          />
+          <!--To place emphasis on a specific word or phrase, you can use the em element.-->
+          <figcaption>Cats <em>Love </em> lasagna</figcaption>
+        </figure>
+        <!--The code for an ordered list (ol) is similar to an unordered list, but list items in an ordered list are numbered when displayed.-->
+        <h3>Top 3 things cats hate:</h3>
+
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+            alt="a group of cats"
+          />
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+      </section>
     </main>
+    <!--The footer element is used to define a footer for a document or section. A footer typically contains information about the author of the document, copyright data, links to terms of use, contact information, and more.-->
+    <footer>
+      <p>
+        No copyright -
+        <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
   </body>
 </html>
