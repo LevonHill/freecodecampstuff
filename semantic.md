@@ -1,1 +1,28 @@
-in these lecture videos, you will learn about semantic HTML and why you should care about it, semantic elements, how semantic HTML differs from presentational HTML, and more.
+<!-- @format -->
+
+in these lecture videos, you will learn about semantic HTML and why you should care about it, semantic elements, how semantic HTML differs from presentational HTML, and more.'rs from presentational HTML, and more.
+
+Why Should You Care About Semantic HTML? Semantic is the meaning of words or phrases, in the HTML language elements have thier own semantic meaning too in fact you can think of your HTML document like you would a text document and much like a text document, you might have headings ,images , bold text and other formatting , semenatic meaning of an element refers to what special information that element conveys. Well First and foremost, using proper semantic HTML, will ensure the best experience for users with assistive technology like screen readers but also semantic HTML can improve your search ranking this is refered to as SEO.
+
+Why is it Important to Have Good Structural Hierarchy? The most important aspect of creating a structural hierarchy is the proper use of heading elements heading elements are numbered as , h1, h2 , h3 , etc this represent this level for that element.You do not want to use heading levels in the incorrect order your h1 element .
+
+What Is the Difference Between Presentational and Semantic HTML? presentational HTML focuses on the appearance and style of the content the early days of HTML developers would use elements like, 'center big' and font elements... but in modern web dev you shouldnt used those types because of their limitations and negative impact on accessibility and maintainability many presentational HTML elements are deprecated- outdated not recommended,examples,<font> ,<center> <big></big> all of these are no longer good to use, so what to use instead, SEMANTIC HTML IS NOW THE RECOMMENDED practice it describes the content of the elements so its much easier to read, understand and maintain, search engines understand your website,when you use smenatic html, and its helpful for accessibility ,screen readers need semantic information to descirbe whats on the webpage.EXAMPLES, <nav> <header>, <footer>, <main> , <table> , <section> <figure> <figcaption> <article>
+
+When Should You Use the Emphasis Element Over the Idiomatic Text Element?idiomatic = i lang='fr' , <em>Make the text have more importance</em>
+
+When Should You Use the Strong Element Over the Bring Attention To Element? YOU WOULD use strong when you need to display a sense of importance or urgency to text, you would use b tag to differ from other texts or make them standout.
+
+What Are Description Lists, and When Should You Use Them? Desciption lists are perfect for presenting terms and definitions in an organized and easy-to-read format like in a glossery or real dictionary.<dl>Is the desrciption list</dl>, <dt>detail title</dt>, <dd>description details</dd>, we would use dls for product specifications, frequently asked questions, contact info, and meta data, so in all, when you have data that has 2 related pieces of information in a key value pair format, where one acts as a label or the 'key', and the other acts as additional related info the 'value'. Use dl...
+
+How Do Block and Inline Quotes Work in HTML?In Html quoted elements are used to distinguish quoted
+
+How Do You Display Abbreviations and Acronyms in HTML?
+
+How Do You Display Addresses in HTML?
+How Do You Display Times and Dates in HTML?
+
+How Do You Not PassedDisplay Mathematical Equations and Chemical Formulas in HTML?
+
+How Do You Represent Computer Code in HTML?
+
+What Are the U, S, and Ruby Elements Used For, and How Do They Work?
