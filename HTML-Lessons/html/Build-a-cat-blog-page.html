@@ -1,0 +1,195 @@
+<!-- @format -->
+
+<!--In this workshop, you will build an HTML only blog page using semantic elements including the main, nav, article and footer elements.-->
+<!--Step 1
+In this workshop, you will practice working with semantic HTML by building a blog page dedicated to Mr. Whiskers the cat.
+To begin the project, add the <!DOCTYPE html>, and an html element with a lang attribute of en.
+
+Remember that you learned how to build a basic HTML boilerplate like this in the previous module.
+
+
+The first section you will build out is the page header.
+
+The header element is used to represent introductory content like page navigation and other introductory information.
+
+Here is an example using the header element:
+
+Example Code
+<header>
+  <h1>Main Page Title Goes Here</h1>
+  <img src="example-logo.png" alt="Example logo" />
+</header>
+Inside the body element, add a header element
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Blog page</title>
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <!--The first section you will build out is the page header.
+
+The header element is used to represent introductory content like page navigation and other introductory information.
+
+Here is an example using the header element:
+
+Example Code
+<header>
+  <h1>Main Page Title Goes Here</h1>
+  <img src="example-logo.png" alt="Example logo" />
+</header>
+Inside the body element, add a header element-->
+
+  <body>
+    <!--The header will be responsible for displaying main title, image and page navigation for the blog.
+
+Inside the header element, add an h1 with the text of Welcome to Mr. Whiskers' Blog Page!.-->
+    <header>
+      <h1>Welcome to Mr. Whiskers' Blog Page!</h1>
+      <figure>
+        <img
+          src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"
+          alt="a cat peacefully sleeping"
+        />
+        <figcaption>Mr. Whiskers Sleeping</figcaption>
+      </figure>
+      <!--For your blog, there should be a way for users to navigate to different sections on the page.
+
+The nav element is used to provide navigation links to other sections in the document or other sections in the website. A lot of times you will see the nav element used for menus or table of contents.
+
+Here is an example of using the nav element:
+
+Example Code
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+Below your figure element, add a nav element with a ul element nested inside.
+
+Inside the ul element, add three li elements.-->
+      <nav>
+        <!--Step 9
+Inside each of the li elements, you will need to have an anchor element.
+
+For the first anchor element, the text should be About and the href attribute value should be "#about". The hash symbol in front of the about represents an id name which be added later on in the project.
+
+For the second anchor element, the text should be Posts and the href attribute value should be "#posts".
+
+For the third anchor element, the text should be Contact and the href attribute value should be "#contact".-->
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#post">Posts</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--Step 10
+Now that you are finished building out the page header, you will need to start adding your main content.
+
+Below your header, add a main element.-->
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Hi there! I'm Jane Doe, a passionate writer who finds endless
+          inspiration in the antics of my beloved cat, Mr. Whiskers.
+        </p>
+        <p>
+          His playful nature and boundless energy keeps me on my toes. I love
+          him so much.
+        </p>
+      </section>
+
+      <section id="posts">
+        <h2>POSTS</h2>
+      </section>
+      <!--Step 14
+For the first blog post, you will use an article element.
+
+The article element represents self contained content on a web page.
+
+-->
+      <article>
+        <h3>Mr. Whiskers' First Day Home</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae id
+          voluptates, sint quasi nulla placeat minima rem, sed exercitationem
+          itaque animi. Veniam in quas sequi ducimus dolorem unde corporis
+          rerum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          dolorem aliquid distinctio cupiditate, deleniti voluptate repellat
+          aut. Earum atque nisi voluptates veritatis, natus beatae ea sint,
+          asperiores hic rerum alias.
+        </p>
+      </article>
+      <!--For the second blog post, you will need to add another article element.
+
+Inside the article element, add an h3 element with the text of Mr. Whiskers' First Bath.
+
+Below your h3 element, add two paragraphs of lorem ipsum text.-->
+      <article>
+        <h3>Mr. Whiskers First Bath</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dolor
+          fugiat nulla sunt quaerat, corrupti, quidem, placeat ea dicta eius
+          repellendus vero quo quam mollitia pariatur ratione quisquam aut et!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nostrum
+          iusto totam saepe. Explicabo molestiae optio beatae doloribus ad quasi
+          provident rerum consequuntur magni architecto, tempora accusamus, quam
+          repellendus sequi.
+        </p>
+      </article>
+
+      <article>
+        <h3>Mr. Whiskers' First Birthday Party</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+          sequi corrupti quis dolorem, repudiandae at sint ipsam deleniti vel.
+          Quo, nulla facere! Assumenda, autem! Dignissimos nobis consectetur
+          quasi modi recusandae.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, omnis
+          debitis? Possimus illo cupiditate nesciunt dolore. Aliquid, explicabo
+          recusandae adipisci dolorum dicta voluptatum ut. Reprehenderit quo
+          quasi autem nisi doloremque!
+        </p>
+      </article>
+      <!--Now that you have finished adding all of the blog posts, try clicking on the Posts link and you should see that the page jumps down to the Posts section.
+The last component to add to your blog page is going to be the contact section.
+Below the main element, add a footer element.-->
+    </main>
+    <footer>
+      <!--Inside the contact section, you will want to show the blog author's contact information. You will use an address element for this.
+The address element is used to represent contact information for a person or organization.
+Here is an example using the address element for a physical address. The br element is used here to create a line break between the text.
+Example Code
+<address>
+  1234 Make Believe Lane <br />
+  Pretend City, USA
+</address>-->
+      <section id="contact">
+        <h2>Contact</h2>
+        <address>
+          <!--to improve user experience, you will want to enhance the phone number so that users tap on it and initiate a call.
+Here is how you can make phone numbers clickable:-->
+          <p>Phone: <a href="tel:5555555555">555-555-5555</a></p>
+          <p>Email: <a href="mailto:fake@email.com">fake@email.com</a></p>
+        </address>
+      </section>
+    </footer>
+  </body>
+</html>

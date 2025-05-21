@@ -13,16 +13,3 @@ When Should You Use the Emphasis Element Over the Idiomatic Text Element?idiomat
 When Should You Use the Strong Element Over the Bring Attention To Element? YOU WOULD use strong when you need to display a sense of importance or urgency to text, you would use b tag to differ from other texts or make them standout.
 
 What Are Description Lists, and When Should You Use Them? Desciption lists are perfect for presenting terms and definitions in an organized and easy-to-read format like in a glossery or real dictionary.<dl>Is the desrciption list</dl>, <dt>detail title</dt>, <dd>description details</dd>, we would use dls for product specifications, frequently asked questions, contact info, and meta data, so in all, when you have data that has 2 related pieces of information in a key value pair format, where one acts as a label or the 'key', and the other acts as additional related info the 'value'. Use dl...
-
-How Do Block and Inline Quotes Work in HTML?In Html quoted elements are used to distinguish quoted
-
-How Do You Display Abbreviations and Acronyms in HTML?
-
-How Do You Display Addresses in HTML?
-How Do You Display Times and Dates in HTML?
-
-How Do You Not PassedDisplay Mathematical Equations and Chemical Formulas in HTML?
-
-How Do You Represent Computer Code in HTML?
-
-What Are the U, S, and Ruby Elements Used For, and How Do They Work?

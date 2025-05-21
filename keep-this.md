@@ -1,0 +1,3 @@
+<!-- @format -->
+
+$path = "C:\Program Files\insightsoftware\Spreadsheet Server Suite" function Get-Bitness($filePath) { if (-not (Test-Path $filePath)) { Write-Output "File not found at path: $filePath" return } $bytes = Get-Content $filePath -Encoding byte -ReadCount 512 $peHeaderOffset = [BitConverter]::ToInt32($bytes[0x3C..0x3F], 0) $machineType = [BitConverter]::ToUInt16($bytes[$peHeaderOffset + 4..$peHeaderOffset + 5], 0) switch ($machineType) { 0x014C { "SSServer.xll is 32-bit (x86)" } 0x8664 { "SSServer.xll is 64-bit (x64)" } default { "Unknown architecture: 0x{0:X}" -f $machineType } } } Get-Bitness $path
