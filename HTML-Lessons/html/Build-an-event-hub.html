@@ -1,0 +1,94 @@
+<!--In this lab, you'll build an event hub and review semantic elements like header, nav, article, and more.
+ser Stories:
+
+1.You should have a header element.
+
+ 2. Inside the header element, you should have an h1 element that contains the text Event Hub, and a nav element.
+
+3.Inside the nav element, you should have an unordered list of two items containing links to different sections of the page. The first item should have the text Upcoming Events, and the second item should have the text Past Events.
+
+4. Each link should be represented by an a element with an href attribute that links to the corresponding section of the page, #upcoming-events and #past-events respectively.
+
+5. You should have a main element that contains the different sections of the page.
+
+6. Inside the main element, you should have two section elements.
+
+7.The first section element should have an id attribute with the value upcoming-events
+
+8. Inside the #upcoming-events section, you should have:
+An h2 element with the text Upcoming Events.
+Two article elements. Each article should represent an event, and it should have :
+An h3 element for the event title.
+A p element for the event description. You can add a date at the bottom if you like.
+
+9. The second section element should have an id attribute with the value past-events.
+
+10. Inside the #past-events section, you should have:
+An h2 element with the text Past Events.
+Two article elements. Each article element should represent a past event, and it should have:
+An h3 element for the event title,
+A p element for the event description. You can add a date at the bottom if you like.
+An image element with the src attribute pointing to an image file and the alt attribute with a description of the image.
+
+Note: You can use any text for the event descriptions and dates. You can use the following image URLs for the images if you like:
+
+https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg.
+https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg.
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Hub</title>
+</head>
+
+<header>
+<h1> EVENT Hub</h1>
+<nav>
+    <ul>
+        <li><a href="#upcoming-events">Upcoming Events</a></li>
+        <li><a href="#past-events">Past Events</a></li>
+    </ul>
+</nav>
+</header>
+
+<body>
+    <main>
+        <section id="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <article>
+                <h3>event 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat praesentium iste consectetur sed quisquam, eius sit tempore velit voluptates dolorum temporibus eum. Fugit temporibus cum possimus repudiandae ea, placeat laudantium?</p>
+
+            </article>
+
+            <article>
+                <h3>event 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat praesentium iste consectetur sed quisquam, eius sit tempore velit voluptates dolorum temporibus eum. Fugit temporibus cum possimus repudiandae ea, placeat laudantium?</p>
+
+            </article>
+
+        </section>
+
+        <section id="past-events">
+            <h2>Past Events</h2>
+            <article>
+                <h3>going to lunch</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos recusandae repudiandae nostrum earum accusamus quisquam assumenda nobis atque ea, veniam eligendi laboriosam, quod minima ullam debitis dicta consequatur velit! Maiores!</p>
+                <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg" alt="random events">
+            </article>
+            <article>
+                <h3>going home</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, asperiores. Omnis incidunt expedita facilis fugit suscipit nemo itaque quisquam consequuntur nihil, recusandae dicta vel eos deleniti inventore excepturi, quae fuga.</p>
+                  <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg" alt="random texts 2">
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>
