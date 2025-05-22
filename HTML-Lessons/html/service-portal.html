@@ -1,0 +1,297 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zekelman IT Onboarding Form</title>
+    <link
+
+    <!-- Custom Red/Black/Grey Theme -->
+    <style>
+      body {
+        background-color: #121212; /* deep black */
+        color: #e0e0e0; /* light grey text */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 2rem;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff4c4c; /* bold red accent */
+        margin-bottom: 2rem;
+      }
+
+      form {
+        background-color: #1f1f1f; /* dark grey */
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        max-width: 800px;
+        margin: 0 auto;
+        border: 1px solid #ff4c4c;
+      }
+
+      fieldset {
+        border: 1px solid #ff4c4c;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 0.5rem;
+      }
+
+      legend {
+        font-size: 1.2rem;
+        color: #ff4c4c;
+        font-weight: bold;
+        padding: 0 0.5rem;
+      }
+
+      label {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+      }
+
+      input,
+      select,
+      textarea {
+        background-color: #2b2b2b;
+        color: #ffffff;
+        border: 1px solid #555;
+        border-radius: 0.375rem;
+        padding: 0.5rem;
+        width: 100%;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+      }
+
+      input[type="radio"]:checked,
+      input[type="checkbox"]:checked {
+        accent-color: #ff4c4c;
+      }
+
+      button[type="submit"] {
+        margin-top: 1.5rem;
+        background-color: #ff4c4c;
+        color: #ffffff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #e43b3b;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      ::placeholder {
+        color: #bdbdbd;
+      }
+
+      /* Improve spacing on small devices */
+      @media (max-width: 576px) {
+        form {
+          padding: 1.25rem;
+        }
+
+        fieldset {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <header class="mb-4">
+        <h1 class="text-center text-primary">Zekelman IT Onboarding Form</h1>
+      </header>
+
+      <form
+        method="POST"
+        action="https://hotel-feedback.freecodecamp.org"
+        class="bg-white p-4 rounded shadow-sm"
+      >
+        <!-- Personal Info -->
+        <fieldset class="mb-4">
+          <legend class="h5 mb-3">Personal Information</legend>
+
+          <div class="mb-3">
+            <label for="full-name" class="form-label">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="name"
+              class="form-control"
+              placeholder="Ex. John Doe"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label"
+              >Email address <span class="text-danger">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="age" class="form-label">Age (optional)</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              class="form-control"
+              min="18"
+              max="100"
+            />
+          </div>
+        </fieldset>
+
+        <!-- First Time -->
+        <fieldset class="mb-4">
+          <legend class="h5 mb-3">
+            Was this your first time at our hotel?
+          </legend>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="hotel-stay"
+              id="yes-option"
+            />
+            <label class="form-check-label" for="yes-option">Yes</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="hotel-stay"
+              id="no-option"
+            />
+            <label class="form-check-label" for="no-option">No</label>
+          </div>
+        </fieldset>
+
+        <!-- Reason for Visit -->
+        <fieldset class="mb-4">
+          <legend class="h5 mb-3">
+            Why did you choose to stay at our hotel?
+            <small>(Check all that apply)</small>
+          </legend>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="ads"
+              value="ads"
+              name="ads"
+            />
+            <label class="form-check-label" for="ads">Social Media Ads</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="recommendation"
+              value="recommendation"
+              name="recommendation"
+            />
+            <label class="form-check-label" for="recommendation"
+              >Personal Recommendation</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="location"
+              value="location"
+              name="location"
+            />
+            <label class="form-check-label" for="location">Location</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="reputation"
+              value="reputation"
+              name="reputation"
+              checked
+            />
+            <label class="form-check-label" for="reputation">Reputation</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="price"
+              value="price"
+              name="price"
+            />
+            <label class="form-check-label" for="price">Price</label>
+          </div>
+        </fieldset>
+
+        <!-- Ratings -->
+        <fieldset class="mb-4">
+          <legend class="h5 mb-3">Ratings</legend>
+
+          <div class="mb-3">
+            <label for="service" class="form-label">How was the service?</label>
+            <select class="form-select" name="service" id="service">
+              <option value="poor">Poor</option>
+              <option value="satisfactory">Satisfactory</option>
+              <option value="good">Good</option>
+              <option value="very-good">Very Good</option>
+              <option value="excellent" selected>Excellent</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="food" class="form-label">How was the food?</label>
+            <select class="form-select" name="food" id="food">
+              <option value="poor">Poor</option>
+              <option value="satisfactory">Satisfactory</option>
+              <option value="good">Good</option>
+              <option value="very-good">Very Good</option>
+              <option value="excellent" selected>Excellent</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="comments" class="form-label">Other Comments?</label>
+            <textarea
+              class="form-control"
+              name="comments"
+              id="comments"
+              rows="4"
+              placeholder="Let us know anything else..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
