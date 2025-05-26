@@ -1,0 +1,66 @@
+<!-- @format -->
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hardware/Software Request Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Hardware/Software Request Form</h2>
+      <form id="requestForm">
+        <input
+          type="text"
+          id="employeeName"
+          placeholder="Employee Name"
+          required
+        />
+        <input
+          type="email"
+          id="employeeEmail"
+          placeholder="Email Address"
+          required
+        />
+
+        <select id="requestType" required>
+          <option value="">Select Request Type</option>
+          <option value="hardware">Hardware</option>
+          <option value="software">Software</option>
+        </select>
+
+        <div id="hardwareOptions" class="hidden">
+          <label><input type="checkbox" value="Mouse" /> Mouse</label>
+          <label><input type="checkbox" value="Monitor" /> Monitor</label>
+          <label><input type="checkbox" value="Keyboard" /> Keyboard</label>
+        </div>
+
+        <div id="softwareOptions" class="hidden">
+          <label><input type="checkbox" value="MS Office" /> MS Office</label>
+          <label
+            ><input type="checkbox" value="Adobe Acrobat" /> Adobe
+            Acrobat</label
+          >
+          <label><input type="checkbox" value="Zoom" /> Zoom</label>
+        </div>
+
+        <textarea
+          id="justification"
+          placeholder="Justification or notes..."
+          rows="3"
+        ></textarea>
+        <select id="priority">
+          <option value="low">Low</option>
+          <option value="normal" selected>Normal</option>
+          <option value="high">High</option>
+        </select>
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
