@@ -1,0 +1,67 @@
+<!-- @format -->
+<!--MY FIRST STRUCTURED PAGE WITH A FORM NO GPT-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+  </head>
+  <body>
+    <h1 tabindex="0">Checkout</h1>
+    <section>
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg"
+        alt="Pictur of a cube"
+      />
+      <h2 tabindex="0">Your Cart</h2>
+      <!--Need to always wrap h2 of the first section then start a new one(h2), if you dont screen-readers wont prioritize the first section!!
+      -->
+    </section>
+
+    <section>
+      <h2>Payment Information</h2>
+      <form action="" method="post">
+        <fieldset>
+          <label for="card-number">Card Number</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            required
+            aria-required="true"
+            placeholder="xxxx-xxxx-xxxx-xxxx"
+          />
+          <label for="card-name">CardHolder Name</label>
+          <input
+            type="text"
+            id="card-name"
+            name="card-name"
+            required
+            aria-required="true"
+            placeholder="Jane Doe "
+          />
+          <label for="card-name">Expiry Date</label>
+          <input
+            type="date"
+            id="card-name"
+            name="card-name"
+            required
+            aria-required="true"
+          />
+          <label for="card-name">CVV</label>
+          <input
+            type="number"
+            id="card-name"
+            name="card-name"
+            required
+            aria-required="true"
+          />
+          <label for="submit">Ready to Check out?</label>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>
