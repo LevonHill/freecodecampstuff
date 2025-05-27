@@ -5,8 +5,12 @@ body {
   color: #212529;
   margin: 0;
 }
-
+/*Media Query needed */
 /* Header / Navbar */
+/*.header-logo{ }/*
+
+/*.search-index{padding} */
+
 .header {
   background-color: #002f6c;
   color: white;
@@ -31,7 +35,7 @@ body {
   text-decoration: underline;
 }
 
-/* Hero Section */
+/* Hero Section need hover and transitions */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
