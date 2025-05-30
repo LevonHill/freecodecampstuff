@@ -12,12 +12,29 @@
       h2{
         font-size: 30px;
       }
+      hr{
+        height: 2px;
+        background-color: brown;
+        border-color: brown;
+      }
 
  h1, h2,p {
         text-align: center;
     
       }
+      a{
+        color:black;
+      }
+      a:visited{
+        color: grey;
+      }
+      a:hover{
+        color: brown;
+      }
    
+      a:active{
+        color: white;
+      }
       .menu{
         max-width: 500px;
         width: 80%;
@@ -46,4 +63,9 @@
       .bottom-line{
         margin-bottom: 25px;
       }
-    
+      footer{
+        font-size: 14px;
+      }
+    address{
+      font-style: normal;
+    }
