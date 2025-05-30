@@ -1,6 +1,7 @@
     body{
         font-family: sans-serif;
         background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+        padding: 20px;
       }
       hr{
         height: 2px;
@@ -8,6 +9,12 @@
       }
       h1, h2{
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+      h1{
+        font: size 40px;
+      }
+      h2{
+        font-size: 30px;
       }
 
  h1, h2,p {
@@ -33,8 +40,14 @@
       }
       .item p{
         display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 18px;
       }
       .established{
         font-style: italic;
+      }
+      .bottom-line{
+        margin-bottom: 25px;
       }
     
