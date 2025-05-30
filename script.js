@@ -1,5 +1,6 @@
  document.getElementById('requestType').addEventListener('change',
 function () { const type = this.value;
+    
 document.getElementById('hardwareOptions').classList.add('hidden');
 document.getElementById('softwareOptions').classList.add('hidden'); if (type ===
 'hardware') {
