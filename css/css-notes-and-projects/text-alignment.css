@@ -1,0 +1,23 @@
+.box{
+
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+h1{
+    text-align: left;
+    font-weight: 700;
+}
+h2{
+    text-align: right;
+      font-weight: 700;
+}
+h3{
+    text-align: center;
+      font-weight: 700;
+}
+h4{
+    text-align: justify;
+      font-weight: 700;
+}
