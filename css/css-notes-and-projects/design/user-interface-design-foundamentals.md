@@ -5,7 +5,7 @@ In these lecture videos, you will learn about the fundamentals of user interface
 lesson 1
 What are common design terms to help you communicate with designers?
 
-As a developer, you may need to work closely with designers. If you understand basic design terminology, you'll have a shared vocabulary and you'll be able to participate in the design process more actively. This can make your workflow more efficient and result in a better user experience.
+As a developer, you may need to work closely with designers. If you understand basic design terminology, you'll have a shared vocabulary and you'll be able to participate in the design process more actively. This can make your workflow more efficient and result in a better user experience.(UX)
 
 So let's dive in. We'll start with the term layout. Layout is how the visual elements are arranged on a page or screen to communicate a message. These elements may include text, images, and white space. The layout is like the blueprint of a design. Designers must consider the placement, size, and hierarchy of each element.
 
@@ -53,7 +53,7 @@ How can you fix this? Well, there are three aspects that impact the contrast rat
 
 The first is the hue, which represents the general color type, like red, blue, orange. Let's shift to a hue that is further away from blue. In this case, let's use red.
 
-Unfortunately, this change only brought the contrast ratio to 1.49:1, which means you need to change the saturation, or the "amount" of color present. Let's increase the amount of red in the text. That brings us much closer to the goal, with a 3.54:1 contrast ratio.
+Unfortunately, this change onlbrought the contrast ratio to 1.49:1, which means you need to change the saturation, or the "amount" of color present. Let's increase the amount of red in thy e text. That brings us much closer to the goal, with a 3.54:1 contrast ratio.
 
 However, you can potentially get even closer by changing the last value, which is lightness. Lightness represents how much white is present in the color.
 
