@@ -19,9 +19,16 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+ .header .nav-text:hover{
+color: green;
+}
 
 .header .logo img {
   height: 50px;
+}
+
+.header .logo img img:hover{
+cursor:pointer ;
 }
 
 .header .nav-links a {
@@ -32,7 +39,7 @@ body {
 }
 
 .header .nav-links a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Hero Section need hover and transitions */
@@ -122,7 +129,7 @@ body {
 }
 
 .tabs button:hover {
-  background-color: #f1f1f1;
+  background-color: hsla(216, 87%, 38%, 0.863);
 }
 
 /* Grid Section */
