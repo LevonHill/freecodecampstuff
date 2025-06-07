@@ -1,33 +1,16 @@
 body{
-    background-color: grey;
-    font-family: Arial, Helvetica, sans-serif;
-}
-p{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-a{
-    text-decoration: none;
-}
-li{
-    list-style: none;
-}
-
-/*class styles*/
-.business-card{
-    width: 300px;
-    background-color: rgb(95, 160, 121);
-    padding: 20px;
-    margin-top: 100px;
-    text-align: center;
-    font-size: 16px;
+    padding: 50px 0;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-right: auto;
     margin-left: auto;
+    width: 100vh;
+    min-height: calc(100vh - 100px);
 }
+hr{
+    width: 100%;
 
-
-
-
-.profile-image{
-    max-width: 100%;
+}
+section{
+    width: 100%;
 }

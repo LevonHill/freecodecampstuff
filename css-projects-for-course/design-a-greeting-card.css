@@ -1,0 +1,28 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+    text-align: center;
+    background-color: brown;
+}
+
+
+
+.card{
+    background-color: white;
+    max-width: 400px;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px gray;
+    transition: transform 0.3s, background-color 0.3s ease;
+}
+/*Step 13 The transform property can transform the element look. For example, giving it a value of scale(0.9) would make the element 10% smaller.*/
+.card:hover {
+ background-color: khaki;
+ transform: scale(1.1);
+
+}
+
+/*The values that the transition property accepts are, in order, the property that the transition is applied to, the duration of the transition, and then the timing.
+
+If there are multiple properties that have a transition, you can write the values for each separated by a comma:*/
