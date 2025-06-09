@@ -5,8 +5,23 @@ body{
     background-color: brown;
 }
 
+section{
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
 
+}
 
+section:target{
+    display: block;
+}
+
+section:hover{
+    transform:skewX(10deg);
+}
 .card{
     background-color: white;
     max-width: 400px;
@@ -21,6 +36,48 @@ body{
  background-color: khaki;
  transform: scale(1.1);
 
+}
+
+h1::before{
+    content: "🥳 ";
+
+}
+
+h1::after{
+    content: " 🥳";
+}
+.message{
+    font-size: 1.2em;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.card-links{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.card-links a{
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    background-color: midnightblue;
+    transition: background-color 0.3s ease
+}
+.card-links a:hover{
+    background-color: orangered;
+}
+.card-links a:active{
+    background-color: midnightblue;
+}
+.card-links a:focus{
+  outline:2px solid yellow;
+}
+
+.card-links a:visited{
+    color: crimson;
 }
 
 /*The values that the transition property accepts are, in order, the property that the transition is applied to, the duration of the transition, and then the timing.
