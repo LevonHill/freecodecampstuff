@@ -6,6 +6,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application Form</title>
+    <link
+      rel="stylesheet"
+      href="/css-projects-for-course/build-job-application.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -17,15 +21,19 @@
           id="name"
           name="name"
           placeholder="Enter your name"
+          required
+          minlength="3"
+          maxlength="32"
         />
-        <label for="email">Enter your email:</label>
+        <label for="email"></label>
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
           placeholder="Enter your email"
+          required
         />
-        <label for="position"></label>
+        <label for="position">Position</label>
         <select name="position" id="position" required>
           <option value>Select a position</option>
           <option value="developer">Developer</option>
@@ -56,6 +64,7 @@
           name="message"
           id="message"
           rows="5"
+          cols="40"
           placeholder="Write your motivation"
           required
         ></textarea>
