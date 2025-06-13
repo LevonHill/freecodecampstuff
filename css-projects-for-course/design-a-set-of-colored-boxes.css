@@ -1,0 +1,27 @@
+body{
+    background-color: #f4f4f4;
+    
+}
+
+.color-box{
+width: 250px;
+height: 250px;
+
+}
+
+ .color1{
+    background-color: #9f9f9f;
+}
+
+ .color2{
+    background-color: rgb(255, 25, 65);
+}
+.color3{
+background-color: maroon;
+}
+ .color4{
+background-color: hsl(2, 75%, 50%);
+}
+ .color5{
+    background-color: hsl(59, 61%, 26%);
+}
