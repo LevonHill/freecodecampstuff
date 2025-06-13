@@ -1,7 +1,121 @@
 .marker{
-    background-color: red;
+    height: 25px;
+    width: 200px;
+    margin: 10px auto;
+    /*Step 10
+While you have three separate marker div elements, they look like one big rectangle. You should add some space between them to make it easier to see each element.
+When the shorthand margin property has two values, it sets margin-top and margin-bottom to the first value, and margin-left and margin-right to the second value.*/
+
+
+
+/*Step 8
+Your marker would look better if it were centered on the page. An easy way to do this is by using the margin shorthand property.
+You can set the margin area of elements separately with properties like margin-top and margin-left, the margin shorthand property makes it easy to set multiple margin areas at the same time.
+A very common way to apply color to an element with CSS is with hexadecimal or hex values. While hex values sound complicated, they're really just another form of RGB values.
+Hex color values start with a # character and take six characters from 0-9 and A-F. The first pair of characters represent red, the second pair represent green, and the third pair represent blue. For example, #4B5320.
+
+*/
+/*You may already be familiar with decimal, or base 10 values, 
+which go from 0 - 9. Hexadecimal, or base 16 values, go from 0 - 9, then A - F
+With hex colors, 00 is 0% of that color, and FF is 100%. So #00FF00 translates to 
+0% red, 100% green, and 0% blue, and is the same as rgb(0, 255, 0).*/
+
+
+
+/*The HSL color model, or hue, saturation, and lightness, is another way to represent colors.
+
+The CSS hsl function accepts 3 values: a number from 0 to 360 for hue, a percentage from 0 to 100 for saturation, and a percentage from 0 to 100 for lightness.
+
+If you imagine a color wheel, the hue red is at 0 degrees, green is at 120 degrees, and blue is at 240 degrees.
+
+Saturation is the intensity of a color from 0%, or gray, to 100% for pure color. You must add the percent sign % to the saturation and lightness values.
+
+Lightness is how bright a color appears, from 0%, or complete black, to 100%, complete white, with 50% being neutral.
+
+
+
+
+
+
+
+Now that you know the basics of how the linear-gradient function and color-stops work, you can use them to make the markers look more realistic.
+In the linear-gradient function, set gradientDirection to 180deg.
+*/
+}
+.red{
+    background:linear-gradient(rgb(122,74,14) 0%, rgb(245,62,113) 50%, rgb(162,27,27)100%);
+}
+
+/*You've practiced a few ways to set flat colors in CSS, but you can also use a color transition, or gradient, on an element.
+
+A gradient is when one color transitions into another. The CSS linear-gradient function lets you control the direction of the transition along a line, and which colors are used.
+
+One thing to remember is that the linear-gradient function actually creates an image element, and is usually paired with the background property which can accept an image as a value.*/
+
+/*Even without the color-stops, you might have noticed that the colors for the green marker transition at the same points as the red marker. The first color is at the start (0%), the second is in the middle (50%), and the last is at the end (100%) of the gradient line.
+
+The linear-gradient function automatically calculates these values for you, and places colors evenly along the gradient line by default.*/
+
+.green{
+    background:linear-gradient( #55680d, #71f53e , #116C31);
+}
+.blue{
+    background:linear-gradient(hsl(186, 75%, 16%));
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
 }
 
 h1{
-    text-align: center;
+ text-align: center;
 }
+.main-bar{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+a{
+    text-decoration: none;
+    width: 250px;
+    margin: 5px;
+    padding: 5px;
+    border: 10px 10px;
+    border-radius: 5px;
+    background-color: hwb(120 27% 22%);
+    color: rgb(5, 1, 1);
+   
+}
+a:hover{
+    background-color: red;
+    color: yellow;
+}
+li{
+    
+    justify-content: space-evenly;
+    margin: 0.5rem;
+}
+.navigation{
+    
+    display: flex;
+    justify-content: space-between;
+     list-style: none;
+    
+}
+
+.Logo{
+    width: 500px;
+    height: auto;
+    display: flex;
+    justify-content:left ;
+}
+.main-bar{
+    width: auto;
+}
+
+
+/*It's better practice to choose one color as the dominant color, and use its complementary color as an accent to bring attention to certain content on the page.
+
+First, in the h1 rule, use the rgb*/
