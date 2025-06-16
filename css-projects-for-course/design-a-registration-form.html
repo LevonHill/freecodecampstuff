@@ -53,21 +53,22 @@ lowercase letters or the digits 0 to 5. Then, remove the minlength attribute, an
       <fieldset>
         <label for="first-name"
           >Enter Your First Name:
-          <input type="text" id="first-name" required />
+          <input type="text" id="first-name" name="first-name" required />
         </label>
         <label for="last-name"
           >Enter Your Last Name:
-          <input type="text" id="last-name" required />
+          <input type="text" id="last-name" name="last-name" required />
         </label>
         <label for="email"
           >Enter Your Email:
-          <input type="email" id="email" minlength="8" required />
+          <input type="email" id="email" minlength="8" name="email" required />
         </label>
         <label for="new-password"
           >Create a New Password:
           <input
             type="password"
             id="new-password"
+            name="new-password"
             pattern="[a-z0-10]{8,}"
             required
           />
@@ -112,15 +113,15 @@ and the option element acts as a label for each dropdown option. Both elements r
       <fieldset>
         <label for="profile-picture"
           >Upload a profile picture:
-          <input type="file" id="profile-picture" />
+          <input type="file" id="profile-picture" name="profile-picture" />
         </label>
         <label for="age"
           >Input your age (years):
-          <input type="number" min="13" max="120" id="age" />
+          <input type="number" min="13" max="120" id="age" name="age" />
         </label>
         <label for="referrer"
           >How did you hear about us?
-          <select name="" id="referrer">
+          <select name="referrer" id="referrer">
             (select one)
             <option value="">(select one)</option>
             <option value="1">freeCodeCamp YouTube Channel</option>
@@ -142,14 +143,19 @@ and the option element acts as a label for each dropdown option. Both elements r
       </fieldset>
 
       <label for="terms-and-conditions">
-        <input id="terms-and-conditions" type="checkbox" required /> I accept
-        the
+        <input
+          id="terms-and-conditions"
+          type="checkbox"
+          name="terms-and-conditions"
+          required
+        />
+        I accept the
         <a href="https://www.freecodecamp.org/news/terms-of-service/">
           terms and conditions</a
         >
       </label>
 
-      <input type="Submit" value="Submit" />
+      <input type="Submit" value="Submit" name="submit" />
     </form>
   </body>
 </html>
