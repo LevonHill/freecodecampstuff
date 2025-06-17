@@ -129,3 +129,16 @@ Move the min-height property and value so that all three element types have the 
  a{
     color: #dfdfe2;
  }
+ input:focus{
+    color: rgb(243, 232, 80);
+ }
+ input:invalid{
+    border: 3px solid red;
+ }
+ input:valid{
+    border: 2px solid green;
+ }
+ input[type=Submit]:hover{
+background-color: yellow;
+color: black;
+ }

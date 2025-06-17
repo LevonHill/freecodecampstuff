@@ -53,15 +53,15 @@ lowercase letters or the digits 0 to 5. Then, remove the minlength attribute, an
       <fieldset>
         <label for="first-name"
           >Enter Your First Name:
-          <input type="text" id="first-name" name="first-name" required />
+          <input type="text" id="first-name"placeholder="First Name" name="first-name" required />
         </label>
         <label for="last-name"
           >Enter Your Last Name:
-          <input type="text" id="last-name" name="last-name" required />
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
         </label>
         <label for="email"
           >Enter Your Email:
-          <input type="email" id="email" minlength="8" name="email" required />
+          <input type="email" id="email" minlength="8" name="email" placeholder="e.g. name@example.com" required />
         </label>
         <label for="new-password"
           >Create a New Password:
@@ -70,6 +70,7 @@ lowercase letters or the digits 0 to 5. Then, remove the minlength attribute, an
             id="new-password"
             name="new-password"
             pattern="[a-z0-10]{8,}"
+            placeholder="Must Have 6 characters"
             required
           />
         </label>
