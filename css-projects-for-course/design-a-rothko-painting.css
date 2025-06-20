@@ -1,3 +1,61 @@
+/*basically the canvas is the content-box, whilst fram is the container so the width height is applying to
+the size of the content via the box model setting a padding you can visually see whitespace, which is 
+space between the content and the border!!!
+
+
+It's helpful to have your margins push in one direction.*/
 .canvas{
     width: 500px;
+    height: 1000PX;
+    background-color: #4d0f00;
+    overflow:hidden;
+    filter: blur(3px);
+}
+.frame{
+    border: 50px solid black;
+    width: 500px;
+    padding: 50px;
+    margin:20px auto;
+}
+.one{
+    width: 425px;
+    height: 150px;
+    background-color: #efb762;
+    margin: 20px auto;
+    border-radius: 9px;
+    box-shadow: 0 0 3px 3px #efb762 ;
+    transform: rotate(-0.6deg);
+}
+.two{
+    width: 475px;
+    height: 200px;
+    background-color:#8f0401 ;
+    border-radius: 8px 10px;
+    box-shadow: 0 0 3px 3px #8f0401;
+    margin: 0 auto 20px;
+    transform: rotate(0.4deg);
+    
+}
+.three{
+    width: 91%;
+    height: 28%;
+    background-color:#b20403 ;
+    border-radius: 30px 25px 60px 12px;
+    margin: auto;
+    box-shadow: 0 0 5px 5px #b20403;
+    filter: blur(2px);
+    transform: rotate(-0.2deg);
+}
+.four{
+    width: 450px;
+    height: 200px;
+    background-color: rgb(243, 82, 82);
+    border-radius: 15px;
+    background: linear-gradient(45deg, yellow, red, blue);
+    margin: 20px auto;
+    box-shadow: 5px 5px 5px 5px rgb(93, 89, 89);
+    transform: rotate(45deg);
+}
+.one , .two{
+    filter: blur(1px);
 }

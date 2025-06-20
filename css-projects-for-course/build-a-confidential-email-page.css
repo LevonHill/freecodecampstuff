@@ -1,0 +1,44 @@
+* *::after *::before{
+box-sizing: border-box;
+}
+
+html{
+font-size: 62.5%;
+}
+body{
+     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    width: 0 auto;
+    padding: 5px;
+}
+.email{
+    padding: 50px;
+    margin-top: 50px;
+    width: 500px;
+    border: 2px;
+}
+
+#confidential, #top-secret{
+display: inline-block;
+padding: 10px 20px;
+margin-left: 5px;
+border: 2px solid black;
+border-radius: 5px;
+background: linear-gradient(grey, rgb(196, 189, 189), rgb(11, 11, 11));
+box-shadow: 2px 3px 4px;
+color: rgb(203, 19, 19);
+
+}
+
+#confidential{
+    margin: 20px auto;
+    transform: rotate(-10deg);
+}
+
+ #top-secret{
+    transform: rotate(10deg);
+    margin: 20px auto;
+}
+.blurred{
+    filter: blur(3px);  
+}
