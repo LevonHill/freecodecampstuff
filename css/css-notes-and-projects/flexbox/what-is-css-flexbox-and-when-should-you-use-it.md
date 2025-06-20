@@ -1,6 +1,7 @@
 <!-- @format -->
 
 In these lecture videos, you will learn how CSS flexbox works, its properties, and when you should use it.
+Lesson 1 
 
 What is CSS flexbox, and when should you use it? LESSON 1
 
@@ -73,6 +74,9 @@ Now the div elements will be aligned vertically because the main axis will be ve
 Example Code
 flex-direction: column-reverse;
 CSS flexbox is a powerful layout model that provides a flexible and efficient way to arrange elements within a container. By understanding the key concepts of flex containers, flex items, and the various flex properties, you can create dynamic and responsive websites that adapt to different screen sizes and orientations.
+
+
+
 
 LESSON 2
 
