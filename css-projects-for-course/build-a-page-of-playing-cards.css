@@ -1,5 +1,5 @@
 body{
-    background-color: antiquewhite;
+    background-color: rgb(85, 67, 150);
 }
 
 div{
@@ -31,6 +31,10 @@ div{
     text-align: center;
 
 }
+.red{
+color: red;
+}
+
 .flipped{
     transform: rotate(180deg);
 }
