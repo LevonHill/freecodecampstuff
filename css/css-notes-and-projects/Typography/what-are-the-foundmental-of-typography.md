@@ -1,3 +1,5 @@
+<!-- @format -->
+
 In these lecture videos, you will learn about typography and its best practices, fonts, and the text-shadow property.
 Lesson 1 What are the fundamentals of typography?
 
@@ -35,7 +37,6 @@ Underlining text or presenting it in italics is helpful for highlighting key poi
 
 Having basic knowledge of typography is essential for designing visually engaging applications. By understanding fonts, spacing, and hierarchy, you can create visual experiences that enhance the readability of your content and reinforce your brand's identity
 
-
 Lesson 2
 What are some best practices for working with typography in your designs?
 
@@ -56,9 +57,6 @@ For accessibility purposes, you should follow the Web Content Accessibility Guid
 You should also provide options to adjust font size and avoid complex fonts as much as possible. As a general rule, you should use simple fonts whenever possible. If your content is easy to read, users are more likely to engage with it. A final tip for working with typography is making sure that your fonts are displayed correctly on different screen sizes and devices.
 
 Typography is a powerful tool for creating beautiful designs and engaging user experiences. By understanding the fundamentals of typography and applying these best practices, you can create effective designs.
-
-
-
 
 Lesson 3
 What are font families and how do they work?
@@ -96,7 +94,6 @@ To make the user experience as consistent as possible, it's also recommended to 
 
 Font families are essential in the world of web design. By using the font-family property, you can instantly transform the look and feel of your text.
 
-
 Lesson 4
 What are web-safe fonts?
 
@@ -119,8 +116,6 @@ By using web-safe fonts, you can make sure that your design looks consistent acr
 
 Now that you know what web-safe fonts are, you can start using them and assigning them as fallbacks to create reliable user experiences across browsers and platforms.
 
-
-
 Lesson 5
 
 What is the @font-face at-rule, and how does it work?
@@ -131,19 +126,19 @@ With @font-face, you can define a custom font by specifying the font file, forma
 
 Example Code
 @font-face {
-  /* Descriptors */
+/_ Descriptors _/
 }
 Within the curly brackets, you will need to include descriptors to customize your font face. Let's see some of the most commonly used ones. The font-family descriptor specifies the name that you will use throughout the spreadsheet to refer to that font. For example, let's say that you define this @font-face rule. It has the font-family descriptor defined and its value is MyCustomFont:
 
 Example Code
 @font-face {
-  font-family: "MyCustomFont";
+font-family: "MyCustomFont";
 }
 In that case, you would need to use that name in your stylesheet wherever you want to assign that custom font family to all the elements matched by a CSS selector. For example, you would use it as the value of font-family:
 
 Example Code
-body { 
-  font-family: "MyCustomFont"; 
+body {
+font-family: "MyCustomFont";
 }
 But for the @font-face at-rule to be valid, you also need to specify the src. This contains references to the font resources. It's basically a list of external references or locally-installed font face names separated by commas. It can also include hints about the format and technology of the font resources.
 
@@ -151,10 +146,10 @@ In the code below, the src is defined. The value is a list of URLs separated by 
 
 Example Code
 @font-face {
-  font-family: "MyCustomFont"; 
-  src: url("path/to/font.woff2"),
-    url("path/to/font.woff"),
-    url("path/to/font.otf");
+font-family: "MyCustomFont";
+src: url("path/to/font.woff2"),
+url("path/to/font.woff"),
+url("path/to/font.otf");
 }
 You can call the url() function to include a file in your stylesheet. In this case, we are including the font files. You'll need to write the file path within parentheses and quotation marks, including the file extension. To improve readability, you can write each resource on a different line, but the last one should end with a semicolon.
 
@@ -166,10 +161,10 @@ Here's an example with font formats. Notice how we write the specific format wit
 
 Example Code
 @font-face {
-  font-family: "MyCustomFont"; 
-  src: url("path/to/font.woff2") format("woff2"),
-    url("path/to/font.otf") format("opentype"),
-    url("path/to/font.woff") format("woff");
+font-family: "MyCustomFont";
+src: url("path/to/font.woff2") format("woff2"),
+url("path/to/font.otf") format("opentype"),
+url("path/to/font.woff") format("woff");
 }
 In this example, you can see that we're specifying the WOFF2 format, the OpenType format, and the WOFF format.
 
@@ -179,14 +174,12 @@ In addition to specifying the format, you can also specify the technology of the
 
 Example Code
 @font-face {
-  font-family: "MyCustomFont"; 
-  src: url("path/to/font.woff2") format("woff2"),
-    url("path/to/font.otf") format("opentype") tech(color-COLRv1),
-    url("path/to/font.woff") format("woff");
+font-family: "MyCustomFont";
+src: url("path/to/font.woff2") format("woff2"),
+url("path/to/font.otf") format("opentype") tech(color-COLRv1),
+url("path/to/font.woff") format("woff");
 }
 These are the fundamentals of the @font-face rule. With this at-rule, you can specify the font file to define custom fonts for your unique designs.
-
-
 
 Lesson 6
 
@@ -213,6 +206,7 @@ Next, you have to choose if you would like to download the font files to add the
 For web development projects, you have two options. You can either use a link element or @import. If you choose the link element option, you can copy and paste the HTML snippet and the CSS rules to add them to your project. You should embed the code in the head element of your HTML file and add the CSS rules that fit your needs. For example, this is what you would add to your HTML file to add all Roboto styles:
 
 Example Code
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -220,75 +214,75 @@ And this is the CSS:
 
 Example Code
 .roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-style: normal;
 }
 
 .roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+font-style: normal;
 }
 
 .roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 
 .roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 500;
+font-style: normal;
 }
 
 .roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-style: normal;
 }
 
 .roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+font-family: "Roboto", sans-serif;
+font-weight: 900;
+font-style: normal;
 }
 
 .roboto-thin-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: italic;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-style: italic;
 }
 
 .roboto-light-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+font-style: italic;
 }
 
 .roboto-regular-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-style: italic;
 }
 
 .roboto-medium-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: italic;
+font-family: "Roboto", sans-serif;
+font-weight: 500;
+font-style: italic;
 }
 
 .roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-style: italic;
 }
 
 .roboto-black-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
+font-family: "Roboto", sans-serif;
+font-weight: 900;
+font-style: italic;
 }
 There's a CSS rule for each font style. Each rule assigns the custom fonts with fallback fonts in case the custom fonts are not loaded properly.
 
@@ -314,20 +308,19 @@ This is how you can add custom Font Squirrel fonts to your project. You can also
 
 However, you should also keep in mind that using multiple external fonts can increase the load time of the website, affecting its overall performance. You should always strive to find a balance between style and efficiency.
 
-
-
 Lesson 7
 What is the text-shadow property, and how does it work?
 
 CSS doesn't apply any shadows to the text by default. This is an example of a paragraph without any shadows. But if you do need to add shadows, you can use the text-shadow property.
 
 Example Code
-text-shadow: /* Values */
+text-shadow: /_ Values _/
 In CSS, you can describe a shadow through a combination of its X offset, Y offset, blur radius, and color. First, you need to specify the X and Y offset, which represent the horizontal and vertical distance of the shadow from the text, respectively. These values are required.
 
 Here's an example of how to apply an X and Y offset on a shadow. We apply the text-shadow property with an x-offset of 3px and a y-offset of 2px:
 
 Example Code
+
 <p>Hello, World!</p>
 Example Code
 p {
@@ -337,19 +330,19 @@ In the browser, the text and the shadow will look similar but we can also custom
 
 Example Code
 p {
-  text-shadow: 3px 2px #00ffc3;
+text-shadow: 3px 2px #00ffc3;
 }
 We are writing the color after the offset but you can also write the color before the offset if you prefer. It's equivalent:
 
 Example Code
 p {
-  text-shadow: #00ffc3 3px 2px;
+text-shadow: #00ffc3 3px 2px;
 }
 In the browser, the shadow will have a specific color, so we can distinguish it very easily from the text. Now that we can differentiate the shadow from the text, it's also important to see how positive and negative values affect the shadow offset. Positive values of the X offset and Y offset will move the shadow right and down, respectively, while negative values will move the shadow left and up. Here's an example that uses negative values instead:
 
 Example Code
 p {
-  text-shadow: -3px -2px #00ffc3;
+text-shadow: -3px -2px #00ffc3;
 }
 Now the shadow will move left and up in relation to the text. Great. But the shadow is not looking very nice, because it looks exactly like the original text but placed behind it. To make it look nicer, we need to add a third value, the blur radius. This value is optional but makes the shadow look a lot smoother and more subtle. The default value of the radius blur is zero. The higher the value, the bigger the blur, which means that the shadow becomes lighter.
 
@@ -357,7 +350,7 @@ Here, we are setting the blur radius to 3px and we're back to positive values fo
 
 Example Code
 p {
-  text-shadow: 3px 2px 3px #00ffc3;
+text-shadow: 3px 2px 3px #00ffc3;
 }
 Now it's starting to look like a shadow. It's more blurry and subtle, so we can focus on the main text while the shadow adds some style in the background. From here, we can tweak the values a little bit until we find a combination of offset, color, and blur radius that fits our needs.
 
@@ -367,9 +360,9 @@ Here's an example of a paragraph with three shadows applied in layers. Notice th
 
 Example Code
 p {
-  text-shadow: 
-    3px 2px 3px #00ffc3, 
-    -3px -2px 3px #0077ff, 
-    5px 4px 3px #dee7e5;
+text-shadow:
+3px 2px 3px #00ffc3,
+-3px -2px 3px #0077ff,
+5px 4px 3px #dee7e5;
 }
 text-shadow is a powerful CSS property for making your text stand out. It can also enhance the overall design of your web application. By choosing the offset, blur, and color, you can create a wide range of shadow effects.

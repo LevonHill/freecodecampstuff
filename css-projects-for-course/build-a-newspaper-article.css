@@ -1,0 +1,84 @@
+html{
+font-size: 24px; 
+box-sizing: border-box; 
+}
+body{
+background-color: hsl(248, 33%, 25%);
+margin: 20px;
+}
+.name{
+    font-family: 'Times New Roman', serif;
+}
+.newspaper{
+    padding: 10px 20px;
+    min-width: 600px;
+    max-width: 600px;
+    height: 600px;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+.headline{
+    font-size: 2em;
+    font-weight: bold;
+}
+.name , .author{
+text-transform: uppercase;
+}
+
+.sub-headline{
+font-weight: 100;
+font-size: 1.5em;
+font-style: italic;
+}
+.author{
+    font-weight: bold;
+}
+.text{
+    text-indent: 20px;
+    line-height: 2em;
+}
+.text::first-letter{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+contact-me{
+    height: 100%;
+}
+fieldset{
+background-color: #ffffff;
+border: 4px solid rgb(9, 9, 9);
+}
+
+input{
+    display: block;
+}
+
+input{
+    margin: 5px;
+padding: 10px;
+display: block;
+width: 30%;
+border-radius: 5px;
+}
+button{
+    padding: 10px;
+    width: 150px;
+    border: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+button:hover{
+    background: linear-gradient(rgb(34, 34, 218),rgb(22, 129, 81),rgb(205, 202, 42));
+}
+.contact-me{
+      padding: 10px 20px;
+    margin:20px;
+    min-width: 600px;
+    max-width: 600px;
+    height: 600px;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-family: "open Sans","sans-serif ";
+}

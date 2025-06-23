@@ -1,0 +1,107 @@
+/*tYPOGRAPGHY BEST-PRACTICES FONT-SIZE 62.5%*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    font-size: 16px;
+}
+
+header h1{
+text-align: center;
+margin: -4px 0;
+letter-spacing: 0.15px;
+}
+p{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label{
+    border: 2px solid black;
+    width: 270px;
+    margin: 20px auto;
+    padding: 0 7px;
+}
+.divider{
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+}
+
+.small-text{
+font-size: 0.85rem;
+}
+.calories-info{
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+
+.calories-info h2{
+    margin: 0;
+}
+.medium{
+    height:5px;
+}
+/*  Typography is often more art than science. 
+You may have to tweak things like alignment until it looks correct.-margin: -7px -2px;*/
+.calories-info span{
+    font-size: 2.4em;
+    font-weight: 700;
+    margin: -7px -2px;
+}
+.indent{
+    margin-left: 1em;
+}
+
+.right{
+    justify-content: flex-end;
+}
+.left-container p {
+    margin:-5px -2px;
+font-size: 2em;
+font-weight: 700;
+}
+.bold{
+    font-weight: 800;
+}
+.large{
+    height:  10px;
+}
+.large , .medium{
+    background-color: black;
+    border: 0;
+}
+.daily-value p {
+    border-bottom: 1px solid #888989;
+}
+.daily-value p:not(.no-divider){
+    border-bottom: 1px solid #888989;
+}
+
+
+
+/*Borders can be used to group and prioritize content.
+
+
+Good use of white space can bring focus to the important elements of your page, 
+and help guide your user's eyes through your text.
+
+
+If you inspect your .label element with your browser's developer tools, 
+you may notice that it's actually 288 pixels wide instead of 270.
+ This is because, by default, the browser includes 
+ the border and padding when determining an element's size.
+
+To solve this, reset the box model by creating a * selector and giving
+ it a box-sizing property of border-box.
+ 
+ The letter-spacing property can be used to adjust the space 
+ between each character of text in an element.
+ 
+ 
+ The rem unit stands for root em, and is relative to the font size of the html element.*/

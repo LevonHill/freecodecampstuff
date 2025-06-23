@@ -1,0 +1,182 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site for Quiz for Freecodecamp" />
+    <title>Quiz Hub</title>
+    <link
+      rel="stylesheet"
+      href="/css-projects-for-course/build-a-quiz-webpage-.css"
+    />
+  </head>
+
+  <!--Navigation is a core part of accessibility, and screen readers rely on you to provide
+   the structure of your page. This is accomplished with semantic HTML elements.
+   
+   The header element will be used to introduce the page, as well as provide a navigation menu.
+
+The main element will contain the core content of your page.
+
+Within the header, provide context about the page by nesting one img, h1, and nav element.
+
+The child combinator selector > is used between selectors to
+ target only elements that match the second selector and are a direct child of the first selector.
+
+This can be helpful when you have deeply nested elements and want to control the scope of your styling.
+
+As this is a quiz, you will need a form for users to submit answers. 
+You can semantically separate the content within the form using section elements.
+Within the main element, 
+create a form with three nested section elements. 
+Then, make the form submit to https://freecodecamp.org/practice-project/accessibility-quiz, 
+
+using the correct method.
+
+
+
+
+To increase the page accessibility, the role attribute can be used to indicate the purpose behind 
+an element on the page to assistive technologies. The role attribute is a part
+ of the Web Accessibility Initiative (WAI), and accepts preset values.-->
+  <body>
+    <header>
+      <img
+        id="logo"
+        src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+        alt="freeCodeCamp"
+      />
+      <h1>HTML/CSS Quiz</h1>
+      <nav>
+        <ul>
+          <li><a href="#student-info">INFO</a></li>
+          <li><a href="#html-questions">HTML</a></li>
+          <li><a href="#css-questions">CSS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--Every region role requires a label, 
+      which helps screen reader users understand the purpose of the region.
+       One method for adding a label is to add a heading element inside the region 
+       and then reference it with the aria-labelledby attribute.
+       
+       It is important to link each input to the corresponding label element.
+        This provides assistive technology users with a visual reference to the input.
+        
+        Even though you added a placeholder to the first input element in the previous lesson, 
+        this is actually not a best-practice for accessibility; too often, 
+        users confuse the placeholder text with an actual input value - 
+        they think there is already a value in the input.-->
+      <form
+        method="post"
+        action="https://freecodecamp.org/practice-project/accessibility-quiz"
+      >
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student information</h2>
+          <div class="info">
+            <label for="name">Enter FullName:</label>
+            <input
+              type="text"
+              id="name"
+              name="FullName"
+              placeholder="FullName"
+            />
+          </div>
+
+          <div class="info">
+            <label for="email">Enter Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="info">
+            <label for="birth-date">Enter Birthday:</label>
+            <input
+              type="date"
+              id="birth-date"
+              name="name"
+              placeholder="Date of Birth"
+            />
+          </div>
+        </section>
+
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">Html Questions</h2>
+          <div class="question-block">
+            <h3><span class="sr-only">Question</span>1</h3>
+            <fieldset name="test-questions" class="question">
+              <legend>When Did You Start at YSU?</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q1-a1"
+                    ><input
+                      type="radio"
+                      id="q1-a1"
+                      name="question1"
+                      value="True" />True
+                    <option value=""></option
+                  ></label>
+                </li>
+                <li>
+                  <label for="q1-a2"
+                    ><input
+                      type="radio"
+                      id="q1-a2"
+                      name="question1"
+                      value="False"
+                    />False
+                    <option value=""></option>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <h3><span class="sr-only">Question</span>2</h3>
+            <fieldset name="test-questions" class="question">
+              <legend>When did you Graduate From YSU?</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1"
+                    ><input
+                      type="radio"
+                      id="q2-a1"
+                      name="question2"
+                      value="True" />True
+
+                    <option value=""></option
+                  ></label>
+                </li>
+                <li>
+                  <label for="q2-a2"
+                    ><input
+                      type="radio"
+                      id="q2-a2"
+                      value="False"
+                      name="question2" />
+                    False
+                    <option value=""></option
+                  ></label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS Questions</h2>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
+<!--The question numbers are not descriptive enough.
+ This is especially true for visually impaired users.
+  One way to get around such an issue, without having to add visible text to the element,
+   is to add text only a screen reader can read.-->
