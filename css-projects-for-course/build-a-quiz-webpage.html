@@ -185,10 +185,10 @@ an element on the page to assistive technologies. The role attribute is a part
               </select>
             </div>
             <div class="question-block">
-                     <label for="answers">How Do you target an INPUT element in CSS?</label>
+                     <label for="answer" id="answers"> How Do you target an INPUT element in CSS?</label>
             </div>
-            <div class="answers">
-              <textarea name="" id=""></textarea>
+            <div class="answer">
+              <textarea name="answers" rows="5" cols="20" id="answer"></textarea>
               <select name="answers" id="" required>
                 <option value="">Select an option</option>
                 <option value="yes">Yes</option>
@@ -197,11 +197,32 @@ an element on the page to assistive technologies. The role attribute is a part
             </div>
           </div>
         </section>
+        <button type="submit">Send</button>
       </form>
     </main>
+    <footer>
+      <address>
+      <a href="https://freecodecamp.org"> freeCodeCamp</a>
+San Francisco<br />
+California<br />
+USA
+    </address>
+  </footer>
   </body>
 </html>
 <!--The question numbers are not descriptive enough.
  This is especially true for visually impaired users.
   One way to get around such an issue, without having to add visible text to the element,
-   is to add text only a screen reader can read.-->
+   is to add text only a screen reader can read.
+   
+   Two final semantic HTML elements for this project are the footer and address elements. 
+   The footer element is a container for a collection of content that is related to the page,
+    and the address element is a container for contact information for the author of the page.
+
+
+    The br tags will allow each part of the address to be on its own line and
+     are useful for presenting address elements properly.
+
+     he address element does not have to contain a physical geographical location. 
+     It can be used to provide a link to the subject.
+   -->
