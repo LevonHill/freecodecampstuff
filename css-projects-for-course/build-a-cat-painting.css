@@ -22,7 +22,9 @@
  body{
     background-color: #c9d2fc;
  }
- 
+ /*ears styles*/
+
+/*cat-head styles*/
 .cat-head{
     width: 205px;
     height: 180px;
@@ -47,15 +49,210 @@
 }
 
 /*Now you should work on the cat's ears.
- There will be a right and a left ear, and inside each, there will be an inner ear.*/
+ There will be a right and a left ear, and inside each, there will be an inner ear
+ 
+ Move the left ear into position by setting a position of absolute,
+  a top of -26px, and a left of -31px.
+  
+  To position the left ear properly, you can use CSS transform to rotate it in a certain degree.
 
- .cat-right-ear{
-    height: 0px;
-    width: 0px;
-    background-color: white;
-    border-left: 35px transparent blue;
-    border-right:35px solid blue;
-    border-bottom: 35px solid red;
-    border-top: 35px transparent red;
+  The transform property allows you to modify the shape, position, 
+  and size of an element without changing the layout or affecting the surrounding elements.
+   It has functions such as translate(), rotate(), scale(), skew(), and matrix().
 
+
+   The ears should always be placed above the part of the head it overlaps. 
+   You can do this with the z-index property.
+   z-index is a property you can use to define the order of overlapping HTML elements. 
+   Any element with a higher z-index will always be positioned over an element with a lower z-index.
+
+
+
+   Most cats have different colors in their ear and the inner part of the same ear. You can implement the same too. 
+   That's why you defined a div element for both right and left inner ears a while ago.
+
+
+
+   You will now start working on the cat's eyes. Like the ears, the eyes will have inner eyes.
+  */
+
+
+/* ear styles*/
+ .cat-left-ear{
+   position:absolute;
+   top:-26px;
+   left:-31px;
+   border-right: 35px solid transparent;
+   border-left:  35px solid transparent;
+   border-top-left-radius: 90px;
+   border-top-right-radius: 10px;
+   transform: rotate(-45deg);
+   border-bottom: 70px solid #5e5e5e;
+   z-index: 1;
  }
+ .cat-right-ear{
+  position: absolute;
+  top: -26px;
+  left: 163px;
+  transform: rotate(45deg);
+  border-right: 35px solid transparent;
+  border-left: 35px solid transparent;
+  border-bottom: 70px solid #5e5e5e;
+    border-top-left-radius: 90px;
+   border-top-right-radius: 10px;
+   z-index: 1;
+ }
+
+
+ /*Inner ear styles */
+ .cat-left-inner-ear{
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-bottom: 40px solid #3b3b4f;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+  position: absolute;
+  top: 22px;
+  left: -20px;
+ }
+ .cat-right-inner-ear{
+border-right: 20px solid transparent;
+border-left: 20px solid transparent;
+border-bottom: 40px solid #3b3b4f;
+border-bottom-right-radius: 40%;
+border-bottom-left-radius: 40%;
+border-top-left-radius: 90px;
+border-top-right-radius: 10px;
+position: absolute;
+top: 22px;
+left: -20px;
+ }
+
+/*Those look like eyes, 
+but you can still make them better. That's why you created two inner eyes div elements.*/
+
+
+ /*Cat Eyes*/
+
+ .cat-left-eye{
+  width: 30px;
+  height: 40px;
+  background-color: #000;
+  position: absolute;
+  top: 54px;
+  left: 39px;
+  border-radius: 60%;
+  transform: rotate(25deg);
+ }
+ .cat-right-eye{
+  width: 30px;
+  height: 40px;
+  background-color: #000;
+  position: absolute;
+  top: 54px;
+  left: 134px;
+  border-radius: 60%;
+  transform: rotate(-25deg);
+ }
+ .cat-left-inner-eye{
+  width: 10px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  border-radius: 60%;
+  transform: rotate(10deg);
+ }
+ .cat-right-inner-eye{
+  width: 10px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  border-radius: 60%;
+  transform: rotate(-5deg);
+ }
+ .cat-nose{
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #442c2c;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 108px;
+  left: 85px;
+ }
+
+ /*finish mouth*/
+.cat-mouth div{
+  width: 30px;
+  height: 50px;
+  border: 2px solid #000;
+  border-color: black transparent transparent transparent;
+  border-radius: 190%/190px 150px 0 0 ;
+}
+.cat-mouth-line-left{
+  position: absolute;
+  top: 88px;
+  left: 74px;
+  transform: rotate(170deg);
+}
+.cat-mouth-line-right{
+  position: absolute;
+  top: 88px;
+  left: 91px;
+  transform: rotate(180deg);
+}
+
+.cat-whiskers-left div{
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+}
+.cat-whiskers-right div{
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+}
+.cat-whisker-left-top{
+  position: absolute;
+  top: 120px;
+  left: 52px;
+  transform: rotate(10deg);
+}
+.cat-whisker-left-middle{
+  position: absolute;
+  top: 127px;
+  left: 52px;
+  transform: rotate(3deg);
+}
+.cat-whisker-left-bottom{
+  position: absolute;
+  top: 134px;
+  left: 52px;
+  transform: rotate(-3deg);
+}
+.cat-whisker-right-top{
+  position: absolute;
+  top: 120px;
+  left: 109px;
+  transform: rotate(-10deg);
+}
+.cat-whisker-right-middle{
+  position: absolute;
+  top: 127px;
+  left: 109px;
+  transform: rotate(-3deg);
+}
+.cat-whisker-right-bottom{
+  position: absolute;
+  top: 134px;
+  left: 109px;
+  transform: rotate(3deg);
+}

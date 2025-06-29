@@ -1,0 +1,44 @@
+/*Time to style your table. Start by resetting the box model. 
+Create an html selector and give it a box-sizing property set to border-box.
+
+Before you get too far into your styling, 
+you should make use of the sr-only class. 
+You can use CSS to make elements with this class completely hidden from the visual page,
+ but still be announced by screen readers.
+ The CSS you are about to write is a common set of properties used to ensure elements 
+ are completely hidden visually.
+
+ he CSS clip property is used to define the visible portions of an element. Set the span[class~="sr-only"]
+  selector to have a clip property of rect(1px, 1px, 1px, 1px).
+
+The clip-path property determines the shape the clip property should take.
+ Set the clip-path property to the value of inset(50%),
+ forming the clip-path into a rectangle within the element.
+
+*/
+
+html{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    color: #0a0a23;
+}
+span[class~="sr-only"]{
+    border: 0;
+    clip-path: inset(50%);
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+    
+}
+h1{
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
