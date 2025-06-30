@@ -1,0 +1,79 @@
+tr[class="read"]{
+    background-image: linear-gradient(rgb(159, 215, 248),#fff);
+}
+tr[class="to-read"]{
+    background-image: linear-gradient(rgb(205, 225, 167),#fff);
+}
+tr[class="in-progress"]{
+    background-image: linear-gradient(rgb(228, 147, 147) ,white, rgb(163, 163, 235));
+}
+
+span{
+    display: inline-block;
+}
+
+tr[class="to-read"] span[class="status"]{
+border: 2px solid black;
+ background-image: linear-gradient(rgb(247, 190, 85), rgb(246, 246, 123),rgb(111, 249, 111));
+}
+
+tr[class="read"] span[class="status"]{
+    border: 2px solid black;
+    background-image: linear-gradient(white, grey, rgb(65, 22, 22));
+}
+tr[class="in-progress"] span[class="status"]{
+    border: 2px solid black;
+    background-image: linear-gradient(rgb(9, 74, 74), rgb(172, 242, 242),rgb(118, 118, 238));
+}
+/*You should have an attribute selector to target the span elements with the class of status 
+and the span elements with the class value starting with rate.*/
+span[class="status"],
+span[class^="rate"] {
+  height: 150px;
+  width: 150px;
+  padding: 4px;
+}
+
+
+/* You should have an attribute selector to target the span elements 
+which are direct children of span elements with the class value starting with rate*/
+span[class^="rate"] > span {
+  border: 2px solid black;
+  border-radius: 2px;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+  background-color: aliceblue;
+}
+
+/* You should have an attribute selector to target the first descendant of span elements
+ that have the word one as a part of their class value.*/
+span[class*="one"] span:first-child {
+  background-image: linear-gradient(red, green, yellow);
+}
+
+/*You should have an attribute selector to target the first descendant of span elements
+ that have the word one as a part of their class value
+ 
+ 🌟 Reality in real-world dev work
+➡ You’ll almost never need class~=
+➡ It’s mainly for tests, code challenges, or very precise legacy situations*/
+span[class*="two"] > :first-of-type(2){
+    background-image: linear-gradient(pink, green, blue);
+}
+
+/* You should have an attribute selector to target the first two descendants
+ of span elements that have the word two as a part of their class value*/
+span[class~="two"] > :nth-child(-n+2)
+{
+    background-image: linear-gradient(green,blue,red);
+}
+
+
+/*. You should have an attribute selector to target the span elements that 
+are descendants of span elements that have the word three as a part of their class value.*/
+span[class~="three"] span {
+  background-image: linear-gradient(red, green, yellow);
+}
+
+

@@ -1,0 +1,121 @@
+/*Browsers often apply default margin and padding values to specific elements.
+ To make sure your piano layout displays correctly, you need to reset the box model.
+
+Add an html rule selector to your CSS file, and set the box-sizing property to border-box.
+
+
+Now that you've reset the html box model, you need to apply this to the elements inside it as well.
+ To do this, you will need to set the box-sizing property of all other elements to be inherited,
+  which ensures that the targeted elements adopt the same value as their parent element.
+
+You will also need to target the pseudo-elements, which are special keywords that follow a selector. 
+The two pseudo-elements you will be using are the ::before and ::after pseudo-elements.
+
+The ::before selector creates a pseudo-element which is the first child of the selected element,
+ while the ::after selector creates a pseudo-element which is the last child of the selected element. 
+ These pseudo-elements are often used to create cosmetic content, which you will see later
+  in this project.
+For now, create a CSS selector to target all elements using *, and include the pseudo-elements
+ ::before and ::after. Set the box-sizing property to inherit.
+
+
+*/
+html{
+    box-sizing: border-box;
+}
+*, *::before , *::after{
+    box-sizing:inherit ;
+}
+#piano{
+    background-color: #00471b;
+    width: 992px;
+    height: 290px;
+    margin: 80px auto;
+    padding: 90px 20px 0 20px;
+    position: relative;
+    border-radius: 10px;
+}
+.keys{
+    background-color: #040404;
+    width: 949px;
+    height: 180px;
+    padding-left: 2px;
+    overflow: hidden;
+}
+/*relative cuz it lives in its own container , which is "Keys" above*/
+.key{
+    background-color: #ffffff;
+    position: relative;
+    width: 41px;
+    height: 175px;
+    margin:2px;
+    float:left;
+    border-radius: 0 0 3px 3px;
+}
+
+/*Now it's time to use the pseudo-selectors you set up earlier. To create the black keys,
+ add a new .key.black--key::after selector. This targets elements with both key and black--key classes
+  and selects the pseudo-element created after these elements in the HTML.
+In the new selector, set the background-color to #1d1e22. Also set the content property to "". 
+This will make the pseudo-elements empty.
+The content property is used to set or override the content of an element.
+ By default, the pseudo-elements created by the ::before and ::after selectors are empty, 
+ which means they are not rendered on the page. By setting the content property to an empty string "",
+  you ensure that the pseudo-elements are rendered, while still appearing empty.
+If you would like to experiment, try removing the background-color property and setting different 
+values for the content property, such as "♥". Remember to undo these changes when you are done so the 
+tests pass.*/
+.key.black--key::after{
+    background-color: #1d1e22;
+    content: "";
+    position: absolute;
+    left: -18px;
+    width: 32px;
+    height: 100px;
+    border-radius: 0 0 3px 3px;
+}
+
+.logo{
+    width: 200px;
+    position: absolute;
+    top: 23px;
+}/*The img element needs its parent to have a position set as a point of reference.
+ Set the position of the #piano selector to relative.*/
+ 
+
+
+
+ /*The @media at-rule, also known as a media query, 
+ is used to conditionally apply CSS. Media queries are commonly used to apply CSS based on
+  the viewport width using the max-width and min-width properties*/
+  @media (max-width:768px){
+    #piano{
+        width: 358px;
+    }
+    .keys{
+        width: 318px;
+    }
+   .logo{
+    width: 150px;
+   }
+  }
+  /*Add another @media rule to apply if the browser window is wider than 769px but smaller than 1199px.*/
+@media(min-width: 769px) and (max-width: 1199px) {
+    #piano{
+        width: 675px;
+    }
+    .keys{
+        width: 633px;
+    }
+}
+  /*You may have noticed that the keys collapse when the browser window
+   is smaller than 768px. To address this issue, set overflow to hidden in the first
+    .keys selector. This property will hide any elements that are pushed outside the defined width 
+    of .keys, preventing unwanted layout changes.
+    
+    
+    
+    Logical operators can be used to construct more complex media queries. 
+    The and logical operator is used to query two media conditions.
+
+For example, a media query that targets a display width between 500px and 1000px would be:*/
