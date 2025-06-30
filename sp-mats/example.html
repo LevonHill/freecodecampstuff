@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visual examples</title>
+    <link rel="stylesheet" href="/sp-mats/example.css">
+</head>
+<body>
+ 
+<main>
+  <header>
+ <nav class="flex flex-container">
+  <img src="" alt="Zekelman company Logo">
+<ul> 
+  <li><a href="#">Events</a></li>
+  <li><a href="#">Contact us</a></li>
+</ul>
+</nav>
+  </header>
+
+  <section class="login-header">
+<h1>Welecome To The eZ Service Portal</h1>
+<p>Log in to order things, Get help or report an issue.</p><br>
+<p>To use SSO, select <span>"Use External login</span> below and enter your</p><br>
+<p>Zekelman Credentials</p>
+  </section>
+
+  <section class="login-form">
+    <form action="">
+      <legend>Login</legend>
+      <fieldset>
+        <label for="username">User name:</label>
+        <input type="text" name="username" autocomplete="off" role="textbox" id="username">
+        <label for="password">Password:</label>
+          <input type="password" name="password" id="password">
+          <!--icon for show password button or hide-->
+          <span class="input-advanced">
+            <button id="mask_icon" class="btn btn-default icon-preview input-group-append maske_btn sn-tooltip-basic">
+          </button>
+          </span>
+        <label>
+          <input name="c.remember_me" type="checkbox" checked id="remember_me">
+          Remember me
+        </label>
+       <a class="forgot-pw-link" ng-href="/$pwd_reset.do?sysparm_url=ss_default" href="/$pwd_reset.do?sysparm_url=ss_default">Forgot Password ?</a>
+      </fieldset>
+      <button type="submit" name="login" class="btn">Log in</button>
+      <!--ask tony where anchor goes? until then #-->
+  <a href="javascript:void(0)" ng-click="c.setExternalLogin(true)">Use external login</a>
+    </form>
+  </section>
+</main>
+</body>
+</html>
