@@ -18,6 +18,7 @@
       class="sp-login-widget"
       ng-class="::(c.options.use_advanced == 'true' ? 'advanced' : '')"
     >
+
     <section class="container">
       <form
         ng-if="!c.externalLoginMode"
@@ -146,7 +147,7 @@
                 >
               </div>
             </div>
-            </section>
+           
             <div
               ng-class="col-xs-12"
               ng-if="data.cert_based_auth || data.isShowLoginWithIdps"
@@ -248,5 +249,6 @@
         >
       </div>
     </div>
+      </section>
   </body>
 </html>

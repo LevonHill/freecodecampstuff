@@ -1,0 +1,39 @@
+*, *::before , *::after{
+    box-sizing: border-box;
+    
+}
+.container{
+    display: grid;
+    grid-template-rows: 1fr;
+
+
+}
+.item{
+    width: 150px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: aqua;
+}
+
+
+
+
+.col {
+background-color: rgb(61, 93, 139);
+
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+gap: 15px;
+background-color: darkgray;
+height: 100%;
+}
+
+html,
+body {
+width: 100%;
+height: 100%;
+}
