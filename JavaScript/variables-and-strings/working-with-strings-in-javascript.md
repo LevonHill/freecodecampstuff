@@ -122,3 +122,86 @@ Violets are blue,
 JavaScript is fun,
 And so are you.
 Template literals are particularly useful when you need to include variables or expressions in strings, format complex strings, or work with multiline text. They are more concise and readable compared to traditional string concatenation.
+
+Lesson 4
+How can you find the position of a substring in a string?
+
+When working with strings in JavaScript, there may be times when you need to locate the position of a specific substring within a larger string.
+
+A substring is a sequence of characters that appears within a larger string. For example, in the string hello world, hello and world are substrings.
+
+To locate the position of a substring inside of a string, you can use the indexOf() method. The indexOf() method in JavaScript allows you to search for a substring within a string.
+
+If the substring is found, indexOf() returns the index (or position) of the first occurrence of that substring. If the substring is not found, indexOf() returns -1, which indicates that the search was unsuccessful.
+
+The indexOf() method takes two arguments: the first is the substring you want to find within the larger string, and the second is an option starting position for the search. If you don’t provide a starting position, the search will begin at the start of the string.
+
+In this context, an argument is a value you give to a function or method when you call it, enabling that function or method to perform its task using the specific information you provide. You will learn more about arguments in future lecture videos.
+
+Here is an example of using the indexOf() method to find the position for the string awesome:
+
+let sentence = "JavaScript is awesome!";
+let position = sentence.indexOf("awesome!");
+console.log(position); // 14
+In this example, the word awesome starts at index 14 in the string JavaScript is awesome!, so the indexOf() method returns 14.
+
+Now, let's see what happens when the substring isn't found:
+
+let sentence = "JavaScript is awesome!";
+let position = sentence.indexOf("fantastic");
+console.log(position); // -1
+Since the word fantastic does not appear in the string, the method returns -1.
+
+You can also specify where to begin searching within the string by providing a second argument to indexOf(). Here’s an example:
+
+let sentence = "JavaScript is awesome, and JavaScript is powerful!";
+let position = sentence.indexOf("JavaScript", 10);
+console.log(position); // 27
+In this case, the search for JavaScript begins after the 10th character, and so the second occurrence of JavaScript is found at index 27.
+
+It is important to note that the indexOf() method is case sensitive.
+
+In this example, the following would return -1 because the capital letter F is not found in the string freeCodeCamp.
+
+console.log("freeCodeCamp".indexOf("F")) // -1
+Using indexOf() can be very useful when you need to check if a substring is present in a string and to determine its position for further operations.
+
+lesson 5 
+
+What is the prompt() method, and how does it work?
+
+The prompt() method is an important part of JavaScript's interaction with the user. It’s one of the simplest ways to get input from a user through a small pop-up dialog box.
+
+You'll often see it used in cases where the webpage needs a piece of information from the user, such as a name or some other form of text input.
+
+So, what exactly does the prompt() method do? It opens a dialog box that asks the user for some input, and then it returns the text entered by the user as a string.
+
+The prompt() method takes two arguments: The first one is the message which will appear inside the dialog box, typically prompting the user to enter information. And the second one is a default value which is optional and will fill the input field initially.
+
+Here's an example of how it works:
+
+let userName = prompt("What is your name?", "Guest");
+In this example, the prompt() method displays a dialog box with the message What is your name? and an input field that initially contains the value Guest.
+
+If the user types their name and presses "OK", the userName variable will store the entered value. If the user presses "Cancel," the userName variable will be set to null. null signifies that the user did not provide any input.
+
+When the page first loads, you'll see the prompt dialog box appear with the message What is your name? and the input field pre-filled with Guest.
+
+Keep in mind that the prompt() method will halt the execution of the script until the user interacts with the dialog box.
+
+This means the rest of your JavaScript code won’t run until the user either provides input and clicks "OK", or cancels the prompt.
+
+One other point to consider is that while prompt() is useful for quick testing or small applications, it's generally avoided in modern, complex web applications due to its disruptive nature and inconsistent behavior across different browsers.
+
+Here's an example:
+
+let age = prompt("How old are you?");
+if (age !== null) {
+  console.log("You are " + age + " years old.");
+} else {
+  console.log("User canceled the prompt.");
+}
+In this example, if the user provides input, it will be displayed in the console. If they cancel, the console will log that the user canceled the prompt.
+
+By understanding the prompt() method, you gain a simple way to interact with users and retrieve information directly through the browser, even though it may not be widely used in modern web applications.
+
