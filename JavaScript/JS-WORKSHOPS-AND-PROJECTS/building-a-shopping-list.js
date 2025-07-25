@@ -6,7 +6,7 @@ console.log("Grocery shopping list");
 //Example Code
 const fruits = ['apple', 'banana', 'orange'];
 //In this step, create a variable called shoppingList and assign it an empty array.
-
+const userData =  ["Levon Hill", "Seth Brand" , "Simon Kennedy" , "Rusty Laidlaw", "Jerry Baum" ,  "Kevin Munson", "Joe patrone"] ; 
 const shoppingList = [];
 console.log("It will be nice to have some fruit to eat.");
 shoppingList.push("Apples");
@@ -24,3 +24,4 @@ console.log(getShoppingListMsg(shoppingList));
 console.log("It looks like we need to get some cooking oil.");
 console.log("This looks like too much junk food.");
 console.log("On second thought, maybe we should be more health conscious.");
+console.log(` List Of IT Users for Zekelman Industries: ${userData} `);
