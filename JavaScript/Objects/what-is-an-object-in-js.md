@@ -1,5 +1,6 @@
-Lesson 1
+<!-- @format -->
 
+Lesson 1
 What is a JavaScript object, and how can you access properties from an object?
 
 In JavaScript, an object is a fundamental data structure that allows you to store and organize related data and functionality.
@@ -9,16 +10,16 @@ You can think of an object as a container that holds various pieces of informati
 These pieces of information are called properties, and they consist of a name (or key) and a value.
 
 const exampleObject = {
-  propertyName: value;
+propertyName: value;
 }
 Objects are incredibly versatile and form the backbone of JavaScript. In fact, almost everything in JavaScript is an object or can be treated as one. This includes arrays, functions, and even primitive data types like strings and numbers when used in certain ways.
 
 This object-centric nature of JavaScript is one of the reasons it's such a flexible and powerful language. Let's look at how you can create an object:
 
 const person = {
-  name: "Alice",
-  age: 30,
-  city: "New York"
+name: "Alice",
+age: 30,
+city: "New York"
 };
 In this example, we've created an object called person with three properties: name, age, and city. Each property has a name and a value, separated by a colon.
 
@@ -30,40 +31,40 @@ objectName.propertyName
 Here's how you would use dot notation with our person object:
 
 const person = {
-  name: "Alice",
-  age: 30,
-  city: "New York"
+name: "Alice",
+age: 30,
+city: "New York"
 };
 
-console.log(person.name);  // Alice
-console.log(person.age);   // 30
+console.log(person.name); // Alice
+console.log(person.age); // 30
 Dot notation is concise and easy to read, making it the preferred choice when you know the exact name of the property you want to access and that name is a valid JavaScript identifier (meaning it doesn't start with a number and doesn't contain special characters or spaces).
 
 Bracket notation, on the other hand, allows you to access object properties using a string inside square brackets. Here's how you would use bracket notation:
 
 const person = {
-  name: "Alice",
-  age: 30,
-  city: "New York"
+name: "Alice",
+age: 30,
+city: "New York"
 };
 
 console.log(person["name"]); // Alice
-console.log(person["age"]); //  30
+console.log(person["age"]); // 30
 Bracket notation is more flexible than dot notation because it allows you to use property names that aren't valid JavaScript identifiers. For example, if you had a property name with spaces or that starts with a number, you'd need to use bracket notation:
 
 const oddObject = {
-  "1stProperty": "Hello",
-  "property with spaces": "World"
+"1stProperty": "Hello",
+"property with spaces": "World"
 };
 
-console.log(oddObject["1stProperty"]);  // Hello
-console.log(oddObject["property with spaces"]);  // World
+console.log(oddObject["1stProperty"]); // Hello
+console.log(oddObject["property with spaces"]); // World
 Another advantage of bracket notation is that it allows you to use variables to access properties dynamically:
 
 const person = {
-  name: "Alice",
-  age: 30,
-  city: "Wonderland"
+name: "Alice",
+age: 30,
+city: "Wonderland"
 };
 
 let propertyName = "city";
@@ -76,7 +77,85 @@ Understanding objects and how to work with them is crucial in JavaScript because
 
 As you continue to learn and work with JavaScript, you'll find that mastering objects opens up a world of possibilities for creating complex and powerful applications.
 
-Lesson 2 
+Lesson 1
+
+What is a JavaScript object, and how can you access properties from an object?
+
+In JavaScript, an object is a fundamental data structure that allows you to store and organize related data and functionality.
+
+You can think of an object as a container that holds various pieces of information, much like a filing cabinet holds different folders and documents.
+
+These pieces of information are called properties, and they consist of a name (or key) and a value.
+
+const exampleObject = {
+propertyName: value;
+}
+Objects are incredibly versatile and form the backbone of JavaScript. In fact, almost everything in JavaScript is an object or can be treated as one. This includes arrays, functions, and even primitive data types like strings and numbers when used in certain ways.
+
+This object-centric nature of JavaScript is one of the reasons it's such a flexible and powerful language. Let's look at how you can create an object:
+
+const person = {
+name: "Alice",
+age: 30,
+city: "New York"
+};
+In this example, we've created an object called person with three properties: name, age, and city. Each property has a name and a value, separated by a colon.
+
+Now, let's explore how you can access these properties. There are two main ways to access object properties in JavaScript: dot notation and bracket notation.
+
+Dot notation is the most common and straightforward way to access object properties. Here is the basic syntax for dot notation:
+
+objectName.propertyName
+Here's how you would use dot notation with our person object:
+
+const person = {
+name: "Alice",
+age: 30,
+city: "New York"
+};
+
+console.log(person.name); // Alice
+console.log(person.age); // 30
+Dot notation is concise and easy to read, making it the preferred choice when you know the exact name of the property you want to access and that name is a valid JavaScript identifier (meaning it doesn't start with a number and doesn't contain special characters or spaces).
+
+Bracket notation, on the other hand, allows you to access object properties using a string inside square brackets. Here's how you would use bracket notation:
+
+const person = {
+name: "Alice",
+age: 30,
+city: "New York"
+};
+
+console.log(person["name"]); // Alice
+console.log(person["age"]); // 30
+Bracket notation is more flexible than dot notation because it allows you to use property names that aren't valid JavaScript identifiers. For example, if you had a property name with spaces or that starts with a number, you'd need to use bracket notation:
+
+const oddObject = {
+"1stProperty": "Hello",
+"property with spaces": "World"
+};
+
+console.log(oddObject["1stProperty"]); // Hello
+console.log(oddObject["property with spaces"]); // World
+Another advantage of bracket notation is that it allows you to use variables to access properties dynamically:
+
+const person = {
+name: "Alice",
+age: 30,
+city: "Wonderland"
+};
+
+let propertyName = "city";
+console.log(person[propertyName]); // Wonderland
+This flexibility makes bracket notation particularly useful when you don't know the exact property name at the time you're writing the code, or when you're working with property names that come from user input or some other dynamic source.
+
+It's worth noting that objects in JavaScript are incredibly powerful and versatile. They can contain not just simple values like strings and numbers, but also arrays, or other objects.
+
+Understanding objects and how to work with them is crucial in JavaScript because they're used extensively throughout the language and in many JavaScript libraries and frameworks.
+
+As you continue to learn and work with JavaScript, you'll find that mastering objects opens up a world of possibilities for creating complex and powerful applications.
+
+Lesson 2
 
 What is object destructuring and how does it work?
 
@@ -95,7 +174,7 @@ const person = { name: "Alice", age: 30, city: "New York" };
 const { name, age } = person;
 
 console.log(name); // Alice
-console.log(age);  // 30
+console.log(age); // 30
 In this example, we're extracting the name and age properties from the person object and assigning them to variables with the same names.
 
 One of the powerful aspects of object destructuring is that you can assign the extracted values to variables with different names. This is particularly useful when you're working with objects that have property names that might conflict with existing variables or when you want to use a different name:
@@ -105,7 +184,7 @@ let person = { name: "Alice", age: 30, city: "New York" };
 let { name: personName, age: personAge } = person;
 
 console.log(personName); // Alice
-console.log(personAge); //  30
+console.log(personAge); // 30
 In this case, we're extracting the name property and assigning it to a variable called personName, and doing the same with age and personAge.
 
 Object destructuring also allows you to set default values. If a property doesn't exist in the object you're destructuring, you can specify a fallback value:
@@ -129,7 +208,7 @@ The code above takes the properties with the same name as our variables and assi
 This shorthand notation is particularly useful when you're returning objects from functions or creating objects with multiple properties:
 
 function createPerson(name, age) {
-  return { name, age };
+return { name, age };
 }
 
 let person = createPerson("Charlie", 35);
@@ -148,9 +227,9 @@ There are several ways to remove properties from an object, with the delete oper
 When you use delete, it removes the selected property from the object. Here's an example of how to use the delete operator:
 
 const person = {
-  name: "Alice",
-  age: 30,
-  job: "Engineer"
+name: "Alice",
+age: 30,
+job: "Engineer"
 };
 
 delete person.job;
@@ -161,10 +240,10 @@ In this example, we start with a person object that has three properties: name, 
 Another way to remove properties is by using destructuring assignment with rest parameters. This approach doesn't actually delete the property, but it creates a new object without the specified properties:
 
 const person = {
-  name: "Bob",
-  age: 25,
-  job: "Designer",
-  city: "New York"
+name: "Bob",
+age: 25,
+job: "Designer",
+city: "New York"
 };
 
 const { job, city, ...remainingProperties } = person;
@@ -185,8 +264,8 @@ We'll explore three common approaches: the hasOwnProperty() method, the in opera
 Let's start with the hasOwnProperty() method. This method returns a boolean indicating whether the object has the specified property as its own property. Here's an example:
 
 const person = {
-  name: "Alice",
-  age: 30
+name: "Alice",
+age: 30
 };
 
 console.log(person.hasOwnProperty("name")); // true
@@ -196,18 +275,18 @@ In this example, we have an object called person with two properties: name and a
 Another way to check for the existence of a property in an object is to use the in operator. Like hasOwnProperty(), the in operator will return true if the property exists on the object. Here's how you can use it:
 
 const person = {
-  name: "Bob",
-  age: 25
+name: "Bob",
+age: 25
 };
-console.log("name" in person);  // true
+console.log("name" in person); // true
 In this example, "name" in person returns true because name is a property of person.
 
 The third method involves checking if a property is undefined. This approach can be useful, but it has some limitations. Here's an example:
 
 const car = {
-  brand: "Toyota",
-  model: "Corolla",
-  year: 2020
+brand: "Toyota",
+model: "Corolla",
+year: 2020
 };
 
 console.log(car.brand !== undefined); // true
