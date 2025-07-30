@@ -1,35 +1,33 @@
-
-function getUserInfo(Username, email) {
-Username = Username,
-email = email;
-return `Users Info is the following: username:${Username} , Email:${email}`;
-}
-
-let person = {Username:"Levon" , email:"Levon.hill@zekelman.com"};
-let Userdata = {Username:'signon', email:'userEmail'};
-
-console.log(Userdata);
-console.log(person);
-console.log(getUserInfo("Jerry Baum" , "Jerry.Baum@zekelman.com"));
-
-
-let arr = ["1", "2", "3", "4"];
-
-let [fruits, banna, ...rest] = arr;
-console.table(arr);
-console.table(person);
-
-
-
-// revisted 
-
-function getUserInfo(user) {
-  const { Username, email } = user;
-  return `User's Info is the following: Username: ${Username}, Email: ${email}`;
-}
-
 let person_ = { Username: "Levon", email: "Levon.hill@zekelman.com" };
 let Userdata_ = { Username: 'signon', email: 'userEmail' };
+let arr = [{id: 1 , username : "Levon Hill"},
+            {id: 2 , username : "Jerry Baum"},
+            {id: 3 ,username : "Seth Brand"},
+            {id: 4 ,username: "simmon kennedy"},
+            {id: 6 , username: "Kevin Munson"},
+            {id: 7 , username: "Joe Patrone"},
+             {id: 8 , username: "zachary Horn"},
+             {id: 9 , username: "preston Gibbs"},
+             {id: 10 , username: "ronalda Brown"}
+];
 
-console.log(getUserInfo(person));
-console.log(getUserInfo({ Username: "Jerry Baum", email: "Jerry.Baum@zekelman.com" }));
+function listItems(arr) {
+const listSize = arr.length;
+return ` This is how big the list is... :${listSize}.`;
+}
+
+
+//let [fruits, banna, ...rest] = arr;
+
+
+
+function getUser(userInfo, login) {
+const {id = userInfo ,password = login} = userInfo;
+return `Users Info is the following: username: ${userInfo} , Password: ${login}`;
+}
+
+console.table(arr.length);
+console.log(arr);
+console.log(getUser("Levon Hill" , "$$Boxcar2025!!"));
+console.log(getUser("robert", "logmein2025!"));
+console.log(listItems(arr));
