@@ -11,3 +11,6 @@ document.getElementById('requestForm').addEventListener('submit', (e) =>{
 e.preventDefault(); alert('Form submitted successfully!')});
  // You can simulate
 //storing this in ServiceNow by logging to console or pushing to a mock API }
+
+
+
