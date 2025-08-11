@@ -1,0 +1,360 @@
+<!-- @format -->
+
+Lesson 1
+in these lectures, you will learn how to work with higher order functions and callbacks. The higher order functions you will learn include map(), filter(), reduce(), sort(), every(), and some(). You will also learn how to chain these methods together to achieve your desired results.
+
+In JavaScript, a callback function is a function that is passed as an argument to another function and is executed after the main function has finished its execution. It's a way to ensure that certain code doesn't execute until a previous operation has been completed.
+
+This concept is fundamental to understanding many aspects of JavaScript, including how the forEach method works.
+
+Let's start by understanding what a callback function is in a simple context.
+
+Imagine you have a function that performs a task, and you want to do something after that task is complete. Instead of writing all the code in one big function, you can pass a second function (the callback) to be executed when the first function is done. This allows for more flexible and modular code.
+
+Now, let's introduce the forEach method. forEach is a built-in method for arrays in JavaScript. It allows you to iterate over each element in an array and perform an operation on each element. The operation you want to perform is defined in a callback function that you provide to forEach.
+
+Here's an example of how forEach works with a callback function:
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(number) {
+console.log(number \* 2);
+});
+In this example, we have an array of numbers. We use the forEach method on this array, and we provide a callback function as an argument to forEach.
+
+This callback function takes one parameter, which represents each element in the array. The forEach method will call this callback function once for each element in the array.
+
+The callback function in this case multiplies each number by 2 and logs the result. So, when this code runs, it will output:
+
+2
+4
+6
+8
+10
+It's important to understand that the callback function is called once for each element in the array, in order. forEach takes care of the looping for you, so you don't have to write a for loop yourself.
+
+You can also use an arrow function as the callback, which can make your code even more concise:
+
+let numbers = [1, 2, 3, 4, 5];
+numbers.forEach(number => console.log(number \* 2));
+This does exactly the same thing as the previous example, but with less code.
+
+The callback function in forEach can actually take up to three arguments: the current element, the index of the current element, and the array that forEach was called upon.
+
+Here's an example using all three:
+
+let numbers = [1, 2, 3, 4, 5];
+numbers.forEach((number, index, array) => {
+console.log(`Element ${number} is at index ${index} in array ${array}`);
+});
+This would log information about each element, its index, and the original array.
+
+Understanding callback functions and methods like forEach is important as you progress in JavaScript. They form the basis for many more advanced concepts in the language, particularly in asynchronous programming which you will learn about in future lectures.
+
+Lesson2
+
+What Are Higher-Order Functions?
+Higher order functions are a powerful concept in JavaScript that can significantly enhance your coding abilities and make your code more flexible and reusable.
+
+In essence, a higher order function is a function that either takes one or more functions as arguments, returns a function, or both.
+
+To understand higher order functions, let's first consider functions as first-class citizens in JavaScript. This means that functions can be treated like any other value – they can be assigned to variables, passed as arguments to other functions, and returned from functions. This flexibility is what enables the creation and use of higher order functions.
+
+One common use of higher order functions is to abstract away complex operations.
+
+For example, you might have a function that performs a specific operation on each element of an array. Instead of writing separate functions for different operations, you can create a higher order function that takes the operation as an argument. This allows you to reuse the same function structure with different behaviors.
+
+Here's an example to illustrate this concept:
+
+function operateOnArray(arr, operation) {
+let result = [];
+for (let i = 0; i < arr.length; i++) {
+result.push(operation(arr[i]));
+}
+return result;
+}
+
+function double(x) {
+return x \* 2;
+}
+
+let numbers = [1, 2, 3, 4, 5];
+let doubledNumbers = operateOnArray(numbers, double);
+console.log(doubledNumbers); // Outputs: [2, 4, 6, 8, 10]
+In this example, operateOnArray is a higher order function. It takes an array and a function (operation) as arguments. It then applies the operation to each element of the array. The double function is passed as an argument to operateOnArray, demonstrating how functions can be used as values.
+
+Higher order functions can also return functions. This is particularly useful for creating specialized functions based on more general ones. This concept is often referred to as function factories. Here's an example:
+
+function multiplyBy(factor) {
+return function(number) {
+return number \* factor;
+}
+}
+
+let double = multiplyBy(2);
+let triple = multiplyBy(3);
+
+console.log(double(5)); // Outputs: 10
+console.log(triple(5)); // Outputs: 15
+In this case, multiplyBy is a higher order function that returns a new function. This new function is specialized based on the factor passed to multiplyBy. This allows us to create custom multiplication functions with ease.
+
+Higher order functions are not just a theoretical concept – they're widely used in JavaScript.
+
+Many built-in methods for arrays in JavaScript, such as map(), filter(), and reduce(), are higher order functions. These methods take a function as an argument and apply it to the elements of the array in various ways. You will learn more about these methods in future lectures.
+
+The use of higher order functions can lead to more declarative and easier-to-understand code.
+
+Instead of describing step-by-step how to accomplish a task (imperative programming), higher order functions allow you to describe what you want to accomplish (declarative programming). This can make your code more readable and maintainable.
+
+As you continue to work with JavaScript, you'll encounter and use higher order functions frequently. They're a key part of functional programming in JavaScript and are essential for writing clean, efficient, and flexible code.
+
+Understanding and utilizing higher order functions will significantly enhance your ability to write sophisticated and elegant JavaScript programs.
+
+Lesson 3
+
+What Is the Map Method, and How Does It Work?
+The map method is a powerful and widely used function in JavaScript that operates on arrays. It is designed to create a new array by applying a given function to each element of the original array.
+
+This method does not modify the original array but instead returns a new array containing the results of the function applied to each element.
+
+Here is an example of using the map method on an array of numbers:
+
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map((num) => num \* 2);
+console.log(numbers); // [1, 2, 3, 4, 5]
+console.log(doubled); // [2, 4, 6, 8, 10]
+To create a new array where each number is doubled, we are using the map method. The map method accepts a callback function where the function is called on every single element in the array.
+
+In this case, each number in the array will be multiplied by 2. The result will be a new array of the numbers 2,4,6,8,10.
+
+The callback function can accept up to three arguments.
+
+The first argument is the current element being processed.
+
+const numbers = [3, 4, 5, 6, 7].map((element) => {
+console.log("Element:", element);
+return element \* 2;
+});
+The second argument is the index of the current element being processed.
+
+const numbers = [3, 4, 5, 6, 7].map((element, index) => {
+console.log("Element:", element);
+console.log("Index:", index);
+return element \* 2;
+});
+The third argument is the array where map is being called on.
+
+const numbers = [3, 4, 5, 6, 7].map((element, index, array) => {
+console.log("Element:", element);
+console.log("Index:", index);
+console.log("Array:", array);
+return element \* 2;
+});
+Understanding and effectively using the map method can significantly improve your ability to work with arrays in JavaScript. In future lectures, we'll dive deeper into more advanced uses of map and explore how it can be a powerful tool for building dynamic and efficient programs.
+
+lesson 4
+
+What Is the Filter Method, and How Does It Work?
+The filter method is used to create a new array with elements that pass a specified test, making it useful for selectively extracting items based on criteria.
+
+In this example, we are using the filter method, to create a new array of only even numbers:
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+
+console.log(evenNumbers); // [2, 4, 6, 8, 10]
+In this example, the filter method applies a callback function to each element of the numbers array. The callback checks whether each number is even using the modulo operator (%).
+
+If the number is even, the function returns true, and that number is included in the new array. If it's odd, the function returns false, and that number is excluded.
+
+Just like the map method, the callback function for the filter method accepts the same three arguments: the current element being processed, the index, and the array.
+
+It's important to note that if no elements pass the test, the filter method returns an empty array.
+
+const numbers = [2, 4, 6, 8].filter((num) => num > 10);
+
+console.log(numbers); // []
+filter is incredibly versatile and can be used in many scenarios. You can use it to remove null or undefined values from an array, to filter objects based on their properties, or to implement search functionality.
+
+Here's an example of using the filter method to return an array of objects for individuals younger than 30 years old.
+
+const developers = [
+{ name: "Alice", age: 25 },
+{ name: "Bob", age: 30 },
+{ name: "Charlie", age: 35 },
+{ name: "David", age: 25 }
+];
+
+const youngPeople = developers.filter((person) => person.age < 30);
+console.log(youngPeople);
+
+// [{ name: "Alice", age: 25 }, { name: "David", age: 25 }]
+Throughout the rest of this curriculum, you will be using the map and filter methods very frequently. So, building familiarity with them will not only streamline your coding process but also help you write cleaner and more efficient code.
+
+Lesson 5
+What Is the Reduce Method, and How Does It Work?
+The reduce method is a function in JavaScript that allows you to process an array and condense it into a single value. This single value can be a number, a string, an object, or even another array.
+
+It's called reduce because it reduces an array to a single output. While it might seem complicated at first, understanding reduce can greatly simplify your code in many situations.
+
+At its core, reduce works by applying a function to each element in the array, in order, passing the result of each calculation on to the next. This function is often called the reducer function.
+
+The reducer function takes two main parameters: an accumulator and the current value. The accumulator is where you store the running result of your operations, and the current value is the array element being processed.
+
+Let's look at an example to illustrate how reduce works:
+
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce(
+(accumulator, currentValue) => accumulator + currentValue,
+0
+);
+
+console.log(sum); // 15
+In this example, we're using reduce to get the sum of all the numbers in the array.
+
+The reducer function takes the accumulator (which starts at 0, as specified by the second argument to reduce) and adds each number to it.
+
+The result of each addition becomes the new accumulator for the next iteration.
+
+The reduce method can also take an initial value as its second argument. This is the value that the accumulator starts with. In the example above, we set it to 0.
+
+If you don't provide an initial value, reduce will use the first element of the array as the initial accumulator and start the process from the second element.
+
+One of the great things about reduce is its flexibility. Because you define the reducer function, you have complete control over how the array is processed and what kind of result you want to produce. This makes reduce extremely powerful, but it can also make it a bit challenging to understand at first.
+
+With practice, you will get the hang of working with the reduce method.
+
+Lesson 6
+
+What Is Method Chaining, and How Does It Work?
+Method chaining is a programming technique that allows you to call multiple methods on the same object in a single line of code. This technique can make your code more readable and concise, especially when performing a series of operations on the same object.
+
+Let's look at an example using different string methods:
+
+const result = " Hello, World! "
+.trim()
+.toLowerCase()
+.replace("world", "JavaScript");
+
+console.log(result); // "hello, JavaScript!"
+In this example, we start with a string and perform three operations in sequence: trim whitespace, convert to lowercase, and replace the string world with JavaScript. Each method returns a new string, which becomes the target of the next method call.
+
+Method chaining can significantly improve code readability when working with complex operations.
+
+For instance, consider this example using the filter, map and reduce methods:
+
+const transactions = [
+{ amount: 100, type: "credit" },
+{ amount: 20, type: "cash" },
+{ amount: 150, type: "credit" },
+{ amount: 50, type: "cash" },
+{ amount: 75, type: "credit" }
+];
+
+const totalCreditWithBonus = transactions
+.filter((transaction) => transaction.type === "credit")
+.map((transaction) => transaction.amount \* 1.1)
+.reduce((sum, amount) => sum + amount, 0);
+
+console.log(totalCreditWithBonus); // 357.5
+In this example, we have an array of transactions where each object has an amount and a credit card or cash type.
+
+We first filter through the transactions and create a new array of just credit card transactions. Then, we chain the map method to the filtered result and for each transaction amount, we multiply it by 1.1 which represents a 10% bonus.
+
+Then, we take that result and chain the reduce method to add up each of the amounts which results in 357.5.
+
+While method chaining can make code more concise and readable, it's important to use it judiciously.
+
+Very long chains can become difficult to debug, as it's not immediately clear which step in the chain might be causing an issue. It's often a good practice to break very long chains into multiple steps for better clarity and easier debugging.
+
+Lesson 7
+How Does the Sort Method Work?
+There are many different ways to sort your data in programming. In this lecture, we will focus on the built-in sort method in JavaScript.
+
+The sort method is used to arrange the elements of an array and returns a reference to the sorted array. No copy is made because the elements are sorted in place.
+
+Here is the basic syntax for the sort method:
+
+array.sort(compareFunction);
+The compareFunction is an optional parameter that specifies a function that defines the sort order. We will take a look later on how to use a compare function when sorting numbers.
+
+In this first example, we have an array of strings in random order.
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+Our goal is to sort the array in alphabetical order. We can do this by calling the sort method on the fruits array.
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+
+console.log(fruits); // ["Apple", "Banana", "Mango", "Orange"]
+The result will be a sorted array of fruits in alphabetical order starting with the fruit Apple.
+
+In this next example, we want to sort the following array of numbers:
+
+const numbers = [414, 200, 5, 10, 3];
+If we try to use the sort method on this numbers array, we will get unexpected results.
+
+const numbers = [414, 200, 5, 10, 3];
+numbers.sort();
+
+console.log(numbers); // [10, 200, 3, 414, 5]
+We expected to see the result [3, 5, 10, 200, 414], but instead we got [10, 200, 3, 414, 5].
+
+This is because the sort method converts the elements to strings and then compares their sequences of UTF-16 code units values.
+
+UTF-16 code units are the numeric values that represent the characters in the string. Examples of UTF-16 code units are the numbers 65, 66, and 67 which represent the characters A, B, and C respectively.
+
+So, the number 200 appears before the number 3 in the array, because the string 200 comes before the string 3 when comparing their UTF-16 code units.
+
+The solution to this problem is to provide a compare function to the sort method.
+
+Here is an example of how to sort the numbers array using a compare function:
+
+const numbers = [414, 200, 5, 10, 3];
+
+numbers.sort((a, b) => a - b);
+
+console.log(numbers); // [3, 5, 10, 200, 414]
+The parameters a and b are the two elements being compared. The compare function should return a negative value if a should come before b, a positive value if a should come after b, and zero if a and b are equal.
+
+The first comparison is between the numbers 414 and 200. The result of 414 - 200 is 214, which is a positive value. This means that 414 should come after 200 in the sorted array.
+
+The next comparison is between the numbers 200 and 5. The result of 200 - 5 is 195, which is a positive value. This means that 200 should come after 5 in the sorted array.
+
+We repeat this process for all the elements in the array, and the result is a sorted array of numbers.
+
+Even though there are many more ways to sort data in programming, the sort method in JavaScript can be useful and efficient in a lot of cases when you need to sort an array of elements.
+
+Lesson 8
+How Do the every() and some() Methods Work?
+When you're working with arrays in JavaScript, there are often times when you want to check if all elements in an array meet a certain condition, or if at least one element meets a condition.
+
+This is where the every() and some() methods come in handy. These methods are powerful tools that can simplify your code and make it more readable.
+
+Let's start with the every() method. This method tests whether all elements in an array pass a test implemented by a provided function. In simpler terms, it checks if every single item in your array satisfies a condition you specify.
+
+The every() method returns true if the provided function returns true for all elements in the array. If any element fails the test, the method immediately returns false and stops checking the remaining elements.
+
+Here's an example to illustrate how every() works:
+
+const numbers = [2, 4, 6, 8, 10];
+const hasAllEvenNumbers = numbers.every((num) => num % 2 === 0);
+
+console.log(hasAllEvenNumbers); // true
+In this example, we're checking if all numbers in the array are even. The function we provide to every() checks if each number is divisible by 2 with no remainder. Since all numbers in our array are indeed even, hasAllEvenNumbers will be true.
+
+Now, let's look at the some() method.
+
+While every() checks if all elements pass a test, some() checks if at least one element passes the test. The some() method returns true as soon as it finds an element that passes the test. If no elements pass the test, it returns false.
+
+Here's an example of how some() works:
+
+const numbers = [1, 3, 5, 7, 8, 9];
+const hasSomeEvenNumbers = numbers.some((num) => num % 2 === 0);
+
+console.log(hasSomeEvenNumbers); // true
+In this example, we're checking whether any number in the array is even. The function we pass to some() is the same as before. Even though most numbers in our array are odd, hasEven will be true because there's at least one even number (8) in the array.
+
+Both every() and some() are very useful when you need to validate data or check for certain conditions in your arrays. They can often replace more verbose loops and conditional statements, making your code cleaner and more expressive.
+
+It's important to note that both methods stop executing as soon as they can determine the result. For every(), this means it stops as soon as it finds a false result. For some(), it stops as soon as it finds a true result. This can be beneficial for performance, especially with large arrays.

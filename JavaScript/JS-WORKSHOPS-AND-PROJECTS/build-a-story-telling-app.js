@@ -1,0 +1,31 @@
+// In this workshop, you will build a storytelling app that will allow you to list different stories based on genre.
+
+//Step 1
+//In this workshop, you will build a storytelling app that allows users to select a type of story and display a short story of that type. The CSS and the HTML boilerplate has been provided for you.
+
+//Begin by creating an h1 element and give it a text Want to hear a short story?.
+
+const storyContainer= document.querySelector(".story-container");
+const scaryStoryBtn = document.getElementById("scary-btn");
+const funnyStoryBtn = document.getElementById("funny-btn");
+const adventureStoryBtn = document.getElementById("adventure-btn");
+const resultParagraph = document.getElementById("result");
+
+    const storyObj = {scary:{ story:"In the dark woods, a group of friends stumbled upon an old, abandoned cabin. They enter the cabin and awaken something malevolent that had been dormant for centuries.", borderColor:" #ee4b2b"},funny:{story: "During a camping trip, Mark decided to show off his culinary skills by cooking dinner over an open fire. However, his attempt caused him to burn the dinner as well as his eyebrows off.",borderColor:"#f1be32"}, adventure:{story:"Lost in the heart of the Amazon rain forest, Sarah and Jake stumbled upon an ancient temple. They braved deadly traps and encountered strange wildlife, all while deciphering cryptic clues left behind by a mysterious civilization.", borderColor:"#acd157"}};
+
+    function displayStory(genre) {
+  if (storyObj.hasOwnProperty(genre)) {
+    const selectedGenre = storyObj[genre];
+    resultParagraph.textContent = selectedGenre.story;
+    storyContainer.style.borderColor = selectedGenre.borderColor;
+  } else {
+    resultParagraph.textContent = "Sorry, that genre is not available.";
+    storyContainer.style.borderColor = "transparent";
+  }
+}
+displayStory("");
+
+
+ scaryStoryBtn.addEventListener("click",() => displayStory("scary"));
+funnyStoryBtn.addEventListener("click", () => displayStory("funny"));
+adventureStoryBtn.addEventListener("click",() => displayStory("adventure"));

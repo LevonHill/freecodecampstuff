@@ -61,3 +61,21 @@
 Don’t memorize — build something, look up methods as needed, and they’ll stick.
 
 Bookmark: MDN Web Docs - JS Reference
+
+//master this below
+
+JavaScript Higher-Order Methods → Underlying DSA + Algorithm
+
+| **Higher-Order Method** | **What It Does**                                              | **Underlying DSA** | **Underlying Algorithm**                                  | **Time Complexity**                   |
+| ----------------------- | ------------------------------------------------------------- | ------------------ | --------------------------------------------------------- | ------------------------------------- |
+| `.map()`                | Transforms each element into something new, returns new array | Array              | Simple iteration (linear traversal)                       | **O(n)**                              |
+| `.filter()`             | Keeps only elements that pass a condition                     | Array              | Linear traversal with conditional check                   | **O(n)**                              |
+| `.reduce()`             | Accumulates values into a single result                       | Array              | Linear traversal, applying callback each step             | **O(n)**                              |
+| `.forEach()`            | Runs a function for each element (no return)                  | Array              | Linear traversal                                          | **O(n)**                              |
+| `.find()`               | Returns the first element matching a condition                | Array              | Linear search                                             | **O(n)** worst, **O(1)** best         |
+| `.findIndex()`          | Returns index of first match                                  | Array              | Linear search                                             | **O(n)** worst                        |
+| `.some()`               | Checks if at least one matches                                | Array              | Linear search with early exit                             | **O(n)** worst                        |
+| `.every()`              | Checks if all match                                           | Array              | Linear search with early exit                             | **O(n)** worst                        |
+| `.sort()`               | Sorts array in place                                          | Array              | **Timsort** (hybrid of merge sort & insertion sort in V8) | **O(n log n)** average, **O(n)** best |
+| `.flat()`               | Flattens nested arrays                                        | Array              | Recursion + linear traversal                              | **O(n)** for flat depth               |
+| `.flatMap()`            | Maps & flattens one level deep                                | Array              | Linear traversal + concatenation                          | **O(n)**                              |
