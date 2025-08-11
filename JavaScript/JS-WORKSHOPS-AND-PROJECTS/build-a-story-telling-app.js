@@ -19,7 +19,7 @@ const resultParagraph = document.getElementById("result");
     resultParagraph.textContent = selectedGenre.story;
     storyContainer.style.borderColor = selectedGenre.borderColor;
   } else {
-    resultParagraph.textContent = "Sorry, that genre is not available.";
+    resultParagraph.textContent = "";
     storyContainer.style.borderColor = "transparent";
   }
 }
@@ -28,4 +28,4 @@ displayStory("");
 
  scaryStoryBtn.addEventListener("click",() => displayStory("scary"));
 funnyStoryBtn.addEventListener("click", () => displayStory("funny"));
-adventureStoryBtn.addEventListener("click",() => displayStory("adventure"));
+adventureStoryBtn.addEventListener("click",() => displayStory("adventure")); 
