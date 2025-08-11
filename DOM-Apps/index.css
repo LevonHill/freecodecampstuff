@@ -7,7 +7,7 @@
 }
 
 :root {
-    --dark-grey: #1b1b32;
+    --dark-grey: #123594;
     --black: #000;
     --white: #fff;
     --golden-yellow: #fecc4c;
@@ -31,6 +31,32 @@ h1 {
     margin: 10px 0 15px;
 }
 
+.container{
+    width: 750px;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+.container div{
+    background-color: #fff;
+    color: #000;
+}
+.container ul{
+list-style: none;
+text-align: center;
+font-size: 24px;
+margin: 10px;
+
+}
+.container li{
+    background-color: #fff;
+    color: #000;
+}
+.divider{
+ border-bottom: 3px solid #0f0f0f;
+}
 .story-container {
     margin: auto;
     padding: 10px;
