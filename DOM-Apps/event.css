@@ -1,0 +1,40 @@
+:root{
+    --primary-color: #113552;
+    --border-color: #fff;
+}
+
+
+body{
+   background-color: #365a77; 
+   margin: 5px;
+}
+.title{
+    text-align: center;
+    margin-top: 5px;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+  
+}
+.container{
+    color: #fff;
+    height: 350px;
+    margin: 20px;
+    width:300px;
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+.container button{
+    
+    border: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
